@@ -1,0 +1,41 @@
+name: Deploy to Prod
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  buildAndDeploy:
+    if: "!contains(github.event.head_commit.message, 'skip ci')" # till github stops fing up
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+      AWS_CLOUDFRONT: ${{ secrets.AWS_CLOUDFRONT }}
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+      API_KEY: ${{ secrets.API_KEY }}
+      AUTH_DOMAIN: ${{ secrets.AUTH_DOMAIN }}
+      PROJECT_ID: ${{ secrets.PROJECT_ID }}
+      STORAGE_BUCKET: ${{ secrets.STORAGE_BUCKET }}
+      MESSAGING_SENDER_ID: ${{ secrets.MESSAGING_SENDER_ID }}
+      APP_ID: ${{ secrets.APP_ID }}
+      MEASUREMENT_ID: ${{ secrets.MEASUREMENT_ID }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Gulp
+        run: yarn global add gulp
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Generate dist
+        run: yarn generate --fail-on-error
+
+      - name: Deploy and Invalidate CDN
+        run: gulp deploy

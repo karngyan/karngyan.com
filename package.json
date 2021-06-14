@@ -1,0 +1,53 @@
+{
+  "name": "karngyan.com",
+  "author": "Karn",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate -m"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.14.0",
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/firebase": "^7.6.1",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/toast": "^3.3.1",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/typography": "^0.4.0",
+    "aos": "^2.3.4",
+    "core-js": "^3.9.1",
+    "date-fns": "^2.22.1",
+    "fibers": "^5.0.0",
+    "firebase": "^8.6.7",
+    "github-calendar": "^2.2.7",
+    "nuxt": "^2.15.3",
+    "nuxt-i18n": "^6.27.0",
+    "pdfvuer": "^1.8.3",
+    "prism-themes": "^1.7.0",
+    "reading-time": "^1.3.0",
+    "vue-clap-button": "^1.0.6",
+    "vue-gtag": "^1.16.1",
+    "vue-typer": "^1.2.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/tailwindcss": "^4.0.3",
+    "@tailwindcss/line-clamp": "^0.2.1",
+    "concurrent-transform": "^1.0.0",
+    "gulp": "^4.0.2",
+    "gulp-awspublish": "^4.1.2",
+    "gulp-awspublish-router": "^0.2.0",
+    "gulp-cloudfront-invalidate-aws-publish": "^1.0.0",
+    "postcss": "^8.2.12",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1"
+  },
+  "resolutions": {
+    "pdfjs-dist": "2.5.207"
+  }
+}
