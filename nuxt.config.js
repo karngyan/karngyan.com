@@ -112,7 +112,7 @@ const nuxtConfig = {
   },
 
   sitemap: {
-    hostname: config.domain,
+    hostname: `https://${config.domain}`,
     routes: createSitemapRoutes
   },
 

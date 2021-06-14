@@ -1,6 +1,6 @@
 # karngyan.com
 
-[![Production](https://github.com/karngyan/karngyan.com/actions/workflows/deploy.prod.yml/badge.svg)](https://github.com/karngyan/karngyan.com/actions/workflows/deploy.prod.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/88476203-8c04-4a61-9be3-cdc713690283/deploy-status)](https://app.netlify.com/sites/karngyantemplate/deploys)
 
 ## Build Setup
 

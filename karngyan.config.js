@@ -2,7 +2,7 @@
 
 export default {
   name: 'gyan prakash karn',
-  domain: 'karngyan.com',
+  domain: 'template.karngyan.com', // add without https:// , used in meta tags and share urls
   image: '/images/bigheadkarngyan.png',
   email: 'mail@karngyan.com',
   googleAnalyticsV4: {
