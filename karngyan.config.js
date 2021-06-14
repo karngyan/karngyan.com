@@ -19,7 +19,7 @@ export default {
     facebook: 'karnsometimes',
     twitter: 'gyankarn',
     instagram: 'karngyan.dev',
-    codestats: 'karngyan'
+    codestats: 'karngyan' // https://codestats.net make a profile if you dont already have one.
   },
   buyMeACoffee: {
     enabled: true,
@@ -33,7 +33,7 @@ export default {
   },
   resume: {
     enabled: true,
-    pdfUrl: '/RESUME_GYAN_KARN_DARK.pdf'
+    pdfUrl: '/RESUME_GYAN_KARN_DARK.pdf' // add files in static folder
   },
   uses: {
     enabled: true,
