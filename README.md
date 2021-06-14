@@ -19,6 +19,8 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://template.karngyan.com)
 
+Visit: [template.karngyan.com](https://template.karngyan.com) to see all feature enabled version of this template.
+
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
