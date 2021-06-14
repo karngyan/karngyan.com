@@ -90,11 +90,6 @@ const nuxtConfig = {
     '@nuxtjs/dotenv',
   ],
 
-  googleAnalytics: {
-    id: config.googleAnalyticsV4.id
-  },
-
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
@@ -212,6 +207,13 @@ if (config.firebase.enabled) {
       },
       firestore: true
     }
+  }
+}
+
+if (config.googleAnalyticsV4.enabled) {
+  nuxtConfig.buildModules.unshift('@nuxtjs/google-analytics')
+  nuxtConfig.googleAnalytics = {
+    id: config.googleAnalyticsV4.id
   }
 }
 

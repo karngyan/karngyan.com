@@ -6,6 +6,7 @@ export default {
   image: '/images/bigheadkarngyan.png',
   email: 'mail@karngyan.com',
   googleAnalyticsV4: {
+    enabled: false,
     id: ''
   },
   // enable if you want comments and likes on posts
