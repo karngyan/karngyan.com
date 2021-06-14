@@ -106,7 +106,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@gyankarn](https://twitter.com/gyankarn) - mail@karngyan.com
+Karn- [@gyankarn](https://twitter.com/gyankarn) - mail@karngyan.com
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
