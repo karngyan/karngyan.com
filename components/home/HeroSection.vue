@@ -22,11 +22,11 @@
                 <p class="mt-3 text-base text-gray-300 sm:mt-5">
                   {{ $t('hero.description') }}
                 </p>
-                <p v-if="$config.workedAt.enabled" class="mt-8 text-sm text-white uppercase tracking-wide font-semibold sm:mt-10">Worked at</p>
+                <p v-if="$config.workedAt.enabled" class="mt-8 text-sm text-white lowercase tracking-wide font-semibold sm:mt-10">Worked at</p>
                 <div v-if="$config.workedAt.enabled" class="mt-5 w-full sm:mx-auto lg:ml-0">
-                  <div class="flex flex-wrap items-start items-center justify-between">
+                  <div class="flex flex-wrap space-x-1 items-start items-center justify-between">
                     <div v-for="(firm, index) in $config.workedAt.meta" :key="index">
-                      <a :href="firm.url" target="_blank" rel="noreferrer" class="flex items-center justify-center px-1">
+                      <a :href="firm.url" target="_blank" rel="noreferrer" class="flex items-center justify-center">
                         <img :src="firm.src" class="h-8 rounded-sm sm:h-9" :alt="firm.name"/>
                       </a>
                     </div>

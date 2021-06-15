@@ -76,8 +76,7 @@ module.exports = {
         },
       }),
       fontFamily: {
-        sans: ['Poppins', 'sans-serif', ...defaultTheme.fontFamily.sans],
-        body: ['"Londrina Solid"', 'sans-serif']
+        sans: ['Inter var',...defaultTheme.fontFamily.sans],
       },
     },
   },
