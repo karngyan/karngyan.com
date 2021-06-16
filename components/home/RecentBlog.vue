@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-800 border-t border-b border-dashed border-gray-700">
+  <div v-if="$config.blog.enabled" class="bg-gray-800 border-t border-b border-dashed border-gray-700">
     <div data-aos="fade-up" class="max-w-7xl pb-6 mx-auto border-l border-r border-dashed border-gray-700">
       <div class="max-w-prose text-center mx-auto py-4">
         <p class="text-xs leading-6 text-indigo-600 font-semibold tracking-wide lowercase">{{ $t('recentBlog.subtext') }}</p>
