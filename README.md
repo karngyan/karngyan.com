@@ -54,6 +54,8 @@ $ yarn dev
 
 # open localhost:3000
 ```
+> Page might not load right now, you can set `firebase.enabled = false` in `karngyan.config.js` for now. Read along.
+
 4. Edit `karngyan.config.js` to your liking. You can turn on and off sections/pages by changing the `enabled` value for respective objects.
     - You can add your images to `static` directory. It matches to root when deployed.
     - Update the `strings` object accordingly.
@@ -119,7 +121,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Karn- [@gyankarn](https://twitter.com/gyankarn) - mail@karngyan.com
+Karn - [@gyankarn](https://twitter.com/gyankarn) - mail@karngyan.com
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
