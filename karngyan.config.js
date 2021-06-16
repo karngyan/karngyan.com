@@ -57,6 +57,21 @@ export default {
       { name: 'CrioDo', src: '/images/crio.png', url: 'https://crio.do' },
     ]
   },
+  loadingIndicator: {
+    name: 'pulse'
+    // https://tobiasahlin.com/spinkit/
+    // circle
+    // cube-grid
+    // fading-circle
+    // folding-cube
+    // chasing-dots
+    // nuxt
+    // pulse
+    // rectangle-bounce
+    // rotating-plane
+    // three-bounce
+    // wandering-cubes
+  },
   strings: {
     en_US: {
       download: 'download',
