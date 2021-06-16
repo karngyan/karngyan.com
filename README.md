@@ -63,6 +63,19 @@ If you don't need that, set `firebase.enabled = false` in `karngyan.config.js`, 
     - Create a web app and get the firebase config object. (You can follow this [video](https://www.youtube.com/watch?v=k1D0_wFlXgo))
     - Enable Authorization (Google Provider supported as of now)
     - Enable Firestore
+    - Set the following cloud firestore rules, so that your database is write protected:
+      ```cel
+      rules_version = '2';
+      service cloud.firestore {
+        match /databases/{database}/documents {
+          match /{document=**} {
+            allow write: if request.auth != null;
+            allow read: if true;
+          }
+        }
+      }
+      ```
+
     - Only if you'll be testing locally
       - Create a copy of `.env.example` -> `.env` and add values from config object.
 6. Deploy to netlify using the following config:
