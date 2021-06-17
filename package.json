@@ -31,6 +31,7 @@
     "prism-themes": "^1.7.0",
     "reading-time": "^1.3.0",
     "vue-clap-button": "^1.0.6",
+    "vue-creator-preview": "^1.1.1",
     "vue-gtag": "^1.16.1",
     "vue-typer": "^1.2.0"
   },

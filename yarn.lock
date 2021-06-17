@@ -12261,6 +12261,11 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
 
+vue-creator-preview@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/vue-creator-preview/-/vue-creator-preview-1.1.1.tgz#f1a53d469ad75c3f0fae8850271a3c715414f87d"
+  integrity sha512-NvUIEabUcVyD5TwUCZQfJ4gONH71YzmBpvmV4NwUOioeJLdbeL8v/ccWne6FtvOEYow4xrHNj5SIsc9InK070w==
+
 vue-gtag@^1.16.1:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/vue-gtag/-/vue-gtag-1.16.1.tgz#edb2f20ab4f6c4d4d372dfecf8c1fcc8ab890181"
