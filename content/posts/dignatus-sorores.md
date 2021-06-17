@@ -13,6 +13,22 @@ author:
   image: /images/bigheadkarngyan.png
 ---
 
+You can add an image like this:
+
+Add your images to static directory and
+
+```md
+![Big Head Karn](/images/bigheadkarngyan.png)
+```
+
+![Big Head Karn](/images/bigheadkarngyan.png)
+
+Or like this if you want to resize it:
+```html
+<img width="30%" src="/images/bigheadkarngyan.png" alt="Big Head Karn"/>
+```
+<img width="30%" src="/images/bigheadkarngyan.png" alt="Big Head Karn"/>
+
 Dignatus sorores
 ================
 
