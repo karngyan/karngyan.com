@@ -8,14 +8,42 @@
         {{ $t('blog.subtext') }}
       </p>
     </div>
-    <div data-aos="zoom-in" class="mt-5 gap-4 mx-4 grid max-w-none lg:grid-cols-3">
-      <BlogCard v-for="post in posts" :key="post.slug" :post="post" />
+
+    <div data-aos="zoom-in" class="select-none px-4 items-center justify-center sm:justify-start flex pt-4">
+      <nav class="flex space-x-4" aria-label="Tabs">
+        <button @click="currentCategory = category" :class="{ 'bg-gray-900 text-gray-300': category === currentCategory }" v-for="category in categories" :key="category" class="text-gray-300 focus:outline-none focus:ring-transparent focus:ring-offset-transparent hover:text-hot-pink px-3 py-2 font-medium text-sm rounded-xl">
+          {{ category }}
+        </button>
+      </nav>
     </div>
+
+    <div data-aos="zoom-in" class="mt-5 gap-4 mx-4 grid max-w-none lg:grid-cols-3">
+      <BlogCard v-for="post in postsByCategories" :key="post.slug" :post="post" />
+    </div>
+
   </div>
 </template>
 
 <script>
+const ALL = 'all'
+
 export default {
+  computed: {
+    categories() {
+      return [ALL, ...new Set(this.posts.map(post => post.category))]
+    },
+    postsByCategories() {
+      if (this.currentCategory === ALL)
+        return this.posts
+      return this.posts.filter(post => post.category === this.currentCategory)
+    }
+  },
+  data() {
+    return {
+      currentCategory: ALL,
+      ALL: ALL, // exporting it to template
+    }
+  },
   head() {
     return {
       title: `blog -- ${this.$config.name}`
@@ -35,5 +63,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
