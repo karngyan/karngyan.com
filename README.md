@@ -40,6 +40,12 @@ Visit: [template.karngyan.com](https://template.karngyan.com) to see all feature
 
 1. Fork the project.
 2. Clone your copy.
+```bash
+# clone just one branch, there's a lot of sh*t on others :P 
+# replace <username> with your username
+git clone -b template --single-branch git@github.com:<username>/karngyan.com.git
+```
+
 3. Choose your favorite editor and open the project.
 4. Local development setup:
 ```bash
