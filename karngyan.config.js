@@ -9,6 +9,13 @@ export default {
     enabled: false,
     id: ''
   },
+  plausibleAnalytics: {
+    enabled: true,
+    domain: 'template.karngyan.com',
+    trackLocalhost: false,
+    // leave it empty if plausible is not self hosted
+    apiHost: 'https://analytics.lookatx.dev/js/plausible.js'
+  },
   // enable if you want comments and likes on posts
   // see how it looks on karngyan.com
   firebase: {

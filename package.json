@@ -33,6 +33,7 @@
     "vue-clap-button": "^1.0.6",
     "vue-creator-preview": "^1.1.1",
     "vue-gtag": "^1.16.1",
+    "vue-plausible": "^1.1.4",
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {
