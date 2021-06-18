@@ -28,6 +28,7 @@ Visit: [template.karngyan.com](https://template.karngyan.com) to see all feature
     <li><a href="#instructions-to-make-it-your-own">Instructions to make it your own</a></li>
     <li><a href="#other-deployment-options">Other Deployment Options</a></li>
     <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#awesome-forks">Awesome Forks</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -117,6 +118,13 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 
+## Awesome Forks ![Awesome][awesome-badge]
+
+Raise a PR when your website's up to add you here.
+
+* [Nenad Radovanovic](https://github.com/nesaplay) - [nenad.xyz](https://nenad.xyz)
+* [Anamika Pandey](https://github.com/anamikapandey745) - [anamika.dev](https://anamika.dev)
+* [Gyan Prakash Karn](https://github.com/gyankarn) - [karngyan.com](https://karngyan.com)
 
 <!-- LICENSE -->
 ## License
@@ -137,5 +145,6 @@ Karn - [@gyankarn](https://twitter.com/gyankarn) - mail@karngyan.com
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/karngyan
 [product-screenshot]: assets/template.karngyan.com.png
+[awesome-badge]: https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
