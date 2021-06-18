@@ -50,42 +50,10 @@
 export default {
   data() {
     return {
-      email: '',
-      firstName: '',
-      lastName: '',
-      isLoading: false
+
     }
   },
   methods: {
-    subscribeUser() {
-      this.isLoading = true;
-      const data = {
-        'email': this.email.trim(),
-        'first_name': this.firstName.trim(),
-        'last_name': this.lastName.trim()
-      }
-      console.debug(data);
-      if (this.email.trim() === '') {
-        this.$toast.show('please enter your email address', { duration: 2000, theme: 'bubble'});
-        this.isLoading = false;
-        return
-      }
-      fetch('https://bfi6exs27j.execute-api.ap-south-1.amazonaws.com/v1/subscribers', {
-        method: 'post',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      }).then((res) => res.json())
-      .then(data => {
-        console.debug(data);
-        this.$toast.success(data.body.message, { duration: 3000 })
-        this.isLoading = false;
-        this.email = '';
-        this.firstName = '';
-        this.lastName = '';
-      })
-    },
   }
 }
 </script>
