@@ -122,9 +122,11 @@ Contributions are what make the open source community such an amazing place to b
 
 Raise a PR when your website's up to add you here.
 
-* [Nenad Radovanovic](https://github.com/nesaplay) - [nenad.xyz](https://nenad.xyz)
+
 * [Anamika Pandey](https://github.com/anamikapandey745) - [anamika.dev](https://anamika.dev)
+* [Claudio Canales](https://github.com/klaudioz) - [klaudioz.eth](https://klaudioz.eth.link/)
 * [Gyan Prakash Karn](https://github.com/gyankarn) - [karngyan.com](https://karngyan.com)
+* [Nenad Radovanovic](https://github.com/nesaplay) - [nenad.xyz](https://nenad.xyz)
 
 <!-- LICENSE -->
 ## License
