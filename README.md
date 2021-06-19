@@ -28,7 +28,7 @@ Visit: [template.karngyan.com](https://template.karngyan.com) to see all feature
     <li><a href="#instructions-to-make-it-your-own">Instructions to make it your own</a></li>
     <li><a href="#other-deployment-options">Other Deployment Options</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#awesome-forks">Awesome Forks</a></li>
+    <li><a href="#awesome-forks-">Awesome Forks</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
