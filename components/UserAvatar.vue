@@ -1,16 +1,26 @@
 <template>
-  <object :data="`https://ui-avatars.com/api/?uppercase=false&background=212324&color=4f46e5&rounded=true&name=${name}`" type="image/png">
-    <img :src="photoURL" alt="user photo">
-  </object>
+  <img :src="imageURL" alt="user photo" @error="onImageLoadError" />
 </template>
 
 <script>
 
 export default {
-  components: {
+  methods: {
+    onImageLoadError() {
+      this.imageLoadError = true
+    }
+  },
+  computed: {
+    imageURL() {
+      const avatar = `https://ui-avatars.com/api/?uppercase=false&background=212324&color=4f46e5&rounded=true&name=${this.name}`
+      if (!this.photoURL || this.imageLoadError)
+        return avatar
+      return this.photoURL
+    }
   },
   data() {
     return {
+      imageLoadError: false
     }
   },
   props: {

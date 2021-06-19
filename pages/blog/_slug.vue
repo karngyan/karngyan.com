@@ -13,7 +13,7 @@
           <div class="px-4 sm:px-0 lg:px-4 pb-4 bg-gray-900 rounded-lg">
             <a href="https://twitter.com/gyankarn">
             <div class="flex flex-items-center justify-center  rounded-full">
-              <img class="w-12 h-12 border-2 border-indigo-600 hover:border-hot-pink -mt-5 bg-gray-900 rounded-full" :src="post.author.image" alt="Author">
+              <UserAvatar :photoURL="post.author.image" :name="post.author.name" class="w-12 h-12 border-2 border-indigo-600 hover:border-hot-pink -mt-5 bg-gray-900 rounded-full"/>
             </div>
             </a>
             <header class="py-4">
@@ -72,7 +72,7 @@
 
 <script>
 export default {
-  async asyncData({ $content, params, route, store, $config }) {
+  async asyncData({ $content, params, route, $config }) {
     const post = await $content('posts', params.slug).fetch()
     post.twitterShareUrl = `https://twitter.com/intent/tweet?text=${post.title} by @${post.author.twitter}&url=https://${$config.domain}${route.fullPath}`
     return {
