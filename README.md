@@ -120,7 +120,8 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Awesome Forks ![Awesome][awesome-badge]
 
-Raise a PR when your website's up to add you here.
+Raise a PR when your website's up to add you here. 
+> Find your alphabetical position, or raise a PR to automate this.
 
 
 * [Anamika Pandey](https://github.com/anamikapandey745) - [anamika.dev](https://anamika.dev)
