@@ -38,7 +38,6 @@
   },
   "devDependencies": {
     "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^4.0.3",
     "@tailwindcss/line-clamp": "^0.2.1",
     "concurrent-transform": "^1.0.0",

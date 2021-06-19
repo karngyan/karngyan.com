@@ -97,16 +97,10 @@ const nuxtConfig = {
     '@nuxt/content',
     '@nuxtjs/robots',
     'nuxt-i18n',
-    '@nuxtjs/pwa',
     '@nuxtjs/toast',
     '@nuxtjs/sitemap'
   ],
 
-  pwa: {
-    icon: {
-      fileName: 'favicon.ico'
-    }
-  },
 
   sitemap: {
     hostname: `https://${config.domain}`,
