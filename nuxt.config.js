@@ -20,6 +20,32 @@ const createSitemapRoutes = async () => {
   return routes;
 }
 
+const constructFeedItem = (post, dir, hostname) => {
+  const url = `${hostname}/${dir}/${post.slug}`;
+  return {
+    title: post.title,
+    id: url,
+    link: url,
+    description: post.description,
+    content: post.bodyPlainText
+  }
+}
+
+const create = async (feed) => {
+  const hostname = process.NODE_ENV === 'production' ? config.domain : 'http://localhost:3000';
+  feed.options = {
+    title: "My Blog",
+    description: "Blog Stuff!",
+    link: `${hostname}/feed.xml`
+  }
+  const { $content } = require('@nuxt/content')
+  const posts = await $content('posts').fetch();
+  for (const post of posts) {
+    const feedItem = await constructFeedItem(post, 'posts', hostname);
+    feed.addItem(feedItem);
+  }
+  return feed;
+}
 
 const nuxtConfig = {
 
@@ -95,10 +121,21 @@ const nuxtConfig = {
     '@nuxtjs/axios',
     '@nuxt/content',
     '@nuxtjs/robots',
+    '@nuxtjs/feed',
     'nuxt-i18n',
     '@nuxtjs/pwa',
     '@nuxtjs/toast',
     '@nuxtjs/sitemap'
+  ],
+
+  feed: [
+    {
+      path: '/feed.xml', // The route to your feed.
+      create, // The create function (see below)
+      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
+      type: 'rss2', // Can be: rss2, atom1, json1
+      data: [] // Will be passed as 2nd argument to `create` function
+    }
   ],
 
   pwa: {
@@ -187,8 +224,8 @@ const nuxtConfig = {
   hooks: {
     'content:file:beforeInsert': (document) => {
       if (document.extension === '.md') {
+        document.bodyPlainText = document.text;
         const { text } = require('reading-time')(document.text)
-
         document.readingTime = text
       }
     }
