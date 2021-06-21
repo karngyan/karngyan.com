@@ -42,9 +42,8 @@ Visit: [template.karngyan.com](https://template.karngyan.com) to see all feature
 1. Fork the project.
 2. Clone your copy and create your own branch out of it.
 ```bash
-# clone just one branch, there's a lot of sh*t on others :P 
 # replace <username> with your username
-git clone -b template --single-branch git@github.com:<username>/karngyan.com.git
+git clone git@github.com:<username>/karngyan.com.git
 git checkout -b website
 ```
 3. Choose your favorite editor and open the project.
@@ -89,6 +88,7 @@ If you don't need that, set `firebase.enabled = false` in `karngyan.config.js`, 
       - Create a copy of `.env.example` -> `.env` and add values from config object.
 6. Deploy to netlify using the following config:
     - Repository: Your forked repository
+    - Branch: `website`
     - Publish Directory: `dist`
     - Build Command: `yarn generate`
     - Don't forget to add all the environment variables if you have enabled firebase.
