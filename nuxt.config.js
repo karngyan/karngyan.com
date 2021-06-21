@@ -88,7 +88,6 @@ const nuxtConfig = {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/dotenv',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -198,6 +197,7 @@ const nuxtConfig = {
 
 if (config.firebase.enabled) {
   nuxtConfig.modules.unshift('@nuxtjs/firebase')
+  nuxtConfig.buildModules.push('@nuxtjs/dotenv')
   nuxtConfig.router.middleware.push('auth')
   nuxtConfig.firebase = {
     config: {
