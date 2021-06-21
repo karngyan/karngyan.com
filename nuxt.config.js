@@ -20,8 +20,8 @@ const createSitemapRoutes = async () => {
   return routes;
 }
 
-const constructFeedItem = (post, dir, hostname) => {
-  const url = `${hostname}/${dir}/${post.slug}`;
+const constructFeedItem = (post, hostname) => {
+  const url = `${hostname}/blog/${post.slug}`;
   return {
     title: post.title,
     id: url,
@@ -41,7 +41,7 @@ const create = async (feed) => {
   const { $content } = require('@nuxt/content')
   const posts = await $content('posts').fetch();
   for (const post of posts) {
-    const feedItem = await constructFeedItem(post, 'posts', hostname);
+    const feedItem = await constructFeedItem(post, hostname);
     feed.addItem(feedItem);
   }
   return feed;
