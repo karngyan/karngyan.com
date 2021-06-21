@@ -32,10 +32,10 @@ const constructFeedItem = (post, dir, hostname) => {
 }
 
 const create = async (feed) => {
-  const hostname = process.NODE_ENV === 'production' ? config.domain : 'http://localhost:3000';
+  const hostname = `https://${config.domain}`;
   feed.options = {
-    title: "My Blog",
-    description: "Blog Stuff!",
+    title: `Blog | ${config.name}`,
+    description: config.strings.en_US.hero.description,
     link: `${hostname}/feed.xml`
   }
   const { $content } = require('@nuxt/content')
