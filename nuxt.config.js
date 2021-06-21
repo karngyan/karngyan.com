@@ -121,21 +121,10 @@ const nuxtConfig = {
     '@nuxtjs/axios',
     '@nuxt/content',
     '@nuxtjs/robots',
-    '@nuxtjs/feed',
     'nuxt-i18n',
     '@nuxtjs/pwa',
     '@nuxtjs/toast',
     '@nuxtjs/sitemap'
-  ],
-
-  feed: [
-    {
-      path: '/feed.xml', // The route to your feed.
-      create, // The create function (see below)
-      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
-      type: 'rss2', // Can be: rss2, atom1, json1
-      data: [] // Will be passed as 2nd argument to `create` function
-    }
   ],
 
   pwa: {
@@ -273,6 +262,22 @@ if (config.plausibleAnalytics.enabled) {
     ...config.plausibleAnalytics
   }
   nuxtConfig.router.middleware.push('analytics')
+}
+
+if (config.blog.enabled) {
+  // if blog enabled only then create feed
+  nuxtConfig.modules.unshift('@nuxtjs/feed')
+  nuxtConfig.feed = [
+    {
+      path: '/feed.xml', // The route to your feed.
+      create, // The create function (see below)
+      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
+      type: 'rss2', // Can be: rss2, atom1, json1
+      data: [] // Will be passed as 2nd argument to `create` function
+    }
+  ]
+
+
 }
 
 export default nuxtConfig
