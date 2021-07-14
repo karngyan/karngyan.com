@@ -76,14 +76,20 @@ If you don't need that, set `firebase.enabled = false` in `karngyan.config.js`, 
       rules_version = '2';
       service cloud.firestore {
         match /databases/{database}/documents {
-          match /{document=**} {
+          match /likes/{id} {
             allow write: if request.auth != null;
+            allow read: if true;
+          }
+          match /comments/{id} {
+            allow write: if request.auth != null && 
+              request.resourse.data.text.size() > 0 &&
+              request.resource.data.slug.size() > 0;
             allow read: if true;
           }
         }
       }
       ```
-
+    - This actually does open a security loophole of open reads and will increase your firebase bills for too many reads.
     - Only if you'll be testing locally
       - Create a copy of `.env.example` -> `.env` and add values from config object.
 6. Deploy to netlify using the following config:
