@@ -64,6 +64,13 @@ export default {
       { name: 'CrioDo', src: '/images/crio.png', url: 'https://crio.do' },
     ]
   },
+  recommendations: {
+    enabled: true,
+    meta: [
+      { name: 'Varun Jain', designation: 'Founder, SendX & SendPost', image: '/images/varun.jpeg', linkedin: 'https://www.linkedin.com/in/varun-jain-582b0215/', content: 'Gyan interned with SendX and SendPost for around 6 months. He is a very strong full-stack engineer who can create pixel perfect frontend while being able to work on backend pieces sending millions of emails per day. He is a quick learner, a great team player and, has a very strong work ethic. You can rely on him that things will be done with utmost quality. He also has pretty good product instincts and can think from the user\'s perspective.' },
+      { name: 'Gaurav Sen', designation: 'Founder, InterviewReady', image: '/images/gaurav.jpeg', linkedin: 'https://www.linkedin.com/in/gkcs/', content: 'Karn is an extraordinarily talented, diligent and foresighted individual. He is gifted at building products from paper to code, and has a knack of finding efficient solutions to complex problems. In my experience, I have rarely seen such a mixture of talent and passion put together. At InterviewReady, Karn exceeded our expectations. If you are considering working with him: congratulations, you are going to have a great time!' },
+    ]
+  },
   loadingIndicator: {
     name: 'pulse'
     // https://tobiasahlin.com/spinkit/
@@ -118,6 +125,10 @@ export default {
       projects: {
         header: 'projects',
         subtext: 'this page lists some of my personal and work projects. every project has some story, click on the title to read'
+      },
+      recommendations: {
+        header: 'recommendations',
+        subtext: 'what do my mentors say'
       }
     }
   }
