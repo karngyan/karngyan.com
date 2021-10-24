@@ -1,5 +1,5 @@
 <template>
-<nav class="backdrop-filter backdrop-blur sticky top-0 z-40 w-full">
+<nav id="nav" class="sticky top-0 z-40 w-full">
   <div class="max-w-7xl border-l border-r border-dashed border-gray-700 mx-auto px-2 sm:px-4 lg:px-8">
     <div class="relative flex items-center justify-between h-16">
       <div class="flex items-center px-2 lg:px-0">
@@ -102,6 +102,16 @@ export default {
     }
   },
   methods: {
+    handleScroll() {
+      this.makeBlur = window.scrollY > 40;
+      const blurClasses = 'bg-opacity-60 border-b border-gray-800 backdrop-filter backdrop-grayscale backdrop-blur-md backdrop-contrast-200'.split(' ')
+      var nav =  document.getElementById("nav");
+      if (this.makeBlur) {
+        nav.classList.add(...blurClasses)
+      } else {
+        nav.classList.remove(...blurClasses)
+      }
+    },
     async signInUser() {
       this.mobileMenuOpen = false
       try {
@@ -117,6 +127,12 @@ export default {
       this.$store.dispatch('signOut')
       this.$toast.show('see you next time 👋', this.toastOptions)
     }
+  },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
   },
 }
 </script>
