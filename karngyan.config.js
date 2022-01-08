@@ -2,7 +2,7 @@
 
 export default {
   name: "Madhav Kauntia",
-  domain: "madhavkauntia.netlify.app", // add without https:// , used in meta tags and share urls
+  domain: "madhavkauntia.com", // add without https:// , used in meta tags and share urls
   image: "/images/madhav.jpeg",
   email: "mkauntia@gmail.com",
   googleAnalyticsV4: {
@@ -34,7 +34,7 @@ export default {
     url: "https://www.buymeacoffee.com/madhavkauntia"
   },
   projects: {
-    enabled: false
+    enabled: true
   },
   blog: {
     enabled: true
@@ -120,12 +120,12 @@ export default {
         signOut: "sign out"
       },
       hero: {
-        iBlogTech: "i blog tech",
+        iBlogTech: "i blog",
         haveALook: "have a look",
         friendlyNeighborhood: "Madhav Kauntia",
         description:
           "I am a software engineer. My primary focus is backend engineering. I'm also a blockchain and Web3 enthusiast.",
-        words: ["developer", "engineer", "programmer", "investor", "musician"]
+        words: ["developer", "engineer", "programmer", "musician", "wagmi"]
       },
       githubCalendar: {
         header: "contributions",
@@ -134,7 +134,7 @@ export default {
       blog: {
         header: "blog",
         subtext:
-          "i try to write once in a while. let me know your thoughts in comments or mail@karngyan.com"
+          "i try to write once in a while. let me know your thoughts at mkauntia@gmail.com"
       },
       recentBlog: {
         header: "recent blogs",
