@@ -135,6 +135,7 @@ Raise a PR when your website's up to add you here.
 * [Gyan Prakash Karn](https://github.com/gyankarn) - [karngyan.com](https://karngyan.com)
 * [Nenad Radovanovic](https://github.com/nesaplay) - [nenad.xyz](https://nenad.xyz)
 * [Ankur Dubey](https://github.com/ankurdubey521) - [ankurdubey.com](https://ankurdubey.com) / [ankurdubey.eth.limo](https://ankurdubey.eth.limo)
+* [Madhav Kauntia](https://github.com/madhavkauntia) - [madhavkauntia.com](https://madhavkauntia.com)
 
 <!-- LICENSE -->
 ## License
