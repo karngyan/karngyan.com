@@ -120,8 +120,8 @@ export default {
         signOut: "sign out"
       },
       hero: {
-        iBlogTech: "i blog",
-        haveALook: "have a look",
+        iBlogTech: "I blog",
+        haveALook: "Have a look",
         friendlyNeighborhood: "Madhav Kauntia",
         description:
           "I am a software engineer. My primary focus is backend engineering. I'm also a blockchain and Web3 enthusiast.",
@@ -134,11 +134,11 @@ export default {
       blog: {
         header: "blog",
         subtext:
-          "i try to write once in a while. let me know your thoughts at mkauntia@gmail.com"
+          "I try to write once in a while. Let me know your thoughts at mkauntia@gmail.com"
       },
       recentBlog: {
         header: "recent blogs",
-        subtext: "it takes a lot of time to write man"
+        subtext: ""
       },
       uses: {
         header: "uses",
