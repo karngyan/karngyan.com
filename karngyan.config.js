@@ -23,7 +23,7 @@ export default {
   },
   social: {
     github: "madhavkauntia",
-    linkedin: "madhav-kauntia-156843177",
+    linkedin: "madhavkauntia",
     facebook: "madhav.kauntia",
     twitter: "madhavkauntia",
     instagram: "madhavkauntia",
@@ -124,8 +124,8 @@ export default {
         haveALook: "Have a look",
         friendlyNeighborhood: "Madhav Kauntia",
         description:
-          "I am a software engineer. My primary focus is backend engineering. I'm also a blockchain and Web3 enthusiast.",
-        words: ["developer", "engineer", "programmer", "musician", "wagmi"]
+          "I am a software engineer. My primary focus is backend engineering. I like to learn new technologies by working on side projects. I also blog my learnings.",
+        words: ["developer", "engineer", "programmer", "wagmi"]
       },
       githubCalendar: {
         header: "contributions",
@@ -148,7 +148,7 @@ export default {
       projects: {
         header: "projects",
         subtext:
-          "this page lists some of my personal and work projects. every project has some story, click on the title to read"
+          "This page lists some of my personal and work projects."
       },
       recommendations: {
         header: "recommendations",
