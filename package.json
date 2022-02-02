@@ -47,7 +47,7 @@
     "gulp-awspublish": "^4.1.2",
     "gulp-awspublish-router": "^0.2.0",
     "gulp-cloudfront-invalidate-aws-publish": "^1.0.0",
-    "postcss": "^8.2.12",
+    "postcss": "^8.2.13",
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1"
   },
