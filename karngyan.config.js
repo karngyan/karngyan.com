@@ -1,10 +1,10 @@
 // Upload files in static/ So any file static/file.pdf -> /file.pdf is accessible at root
 
 export default {
-  name: 'gyan prakash karn',
-  domain: 'template.karngyan.com', // add without https:// , used in meta tags and share urls
+  name: 'Mokutmfon O. Okon',
+  domain: 'mallovelli.com', // add without https:// , used in meta tags and share urls
   image: '/images/bigheadkarngyan.png',
-  email: 'mail@karngyan.com',
+  email: 'mokut.okon@gmail.com',
   googleAnalyticsV4: {
     enabled: false,
     id: ''
@@ -14,7 +14,7 @@ export default {
     domain: 'template.karngyan.com',
     trackLocalhost: false,
     // leave it empty if plausible is not self hosted
-    apiHost: 'https://analytics.lookatx.dev' // default: https://plausible.io
+    apiHost: 'https://plausible.io' // default: https://plausible.io
   },
   // enable if you want comments and likes on posts
   // see how it looks on karngyan.com
@@ -22,16 +22,16 @@ export default {
     enabled: false
   },
   social: {
-    github: 'karngyan',
-    linkedin: 'karngyan',
-    facebook: 'karnsometimes',
-    twitter: 'gyankarn',
-    instagram: 'karngyan.dev',
-    codestats: 'karngyan' // https://codestats.net make a profile if you dont already have one.
+    github: 'mallovelli',
+    linkedin: 'Mokutmfon Okon',
+    facebook: 'Malloy Okon',
+    twitter: 'mallovelli',
+    instagram: 'mancshaft_',
+    codestats: 'Mallovelli' // https://codestats.net make a profile if you dont already have one.
   },
   buyMeACoffee: {
     enabled: true,
-    url: 'https://www.buymeacoffee.com/karngyan'
+    url: 'https://www.buymeacoffee.com/mokutokon4g'
   },
   projects: {
     enabled: true,
@@ -40,11 +40,11 @@ export default {
     enabled: true,
   },
   resume: {
-    enabled: true,
+    enabled: false,
     pdfUrl: '/RESUME_GYAN_KARN_DARK.pdf' // add files in static folder
   },
   uses: {
-    enabled: true,
+    enabled: false,
     meta: [
       {title: 'OS', value: 'macOS Catalina'},
       {title: 'Memory', value: '16 GB 2667 MHz DDR4'},
@@ -56,7 +56,7 @@ export default {
   },
   workedAt: {
     // add logos in static and at max add 3/4
-    enabled: true,
+    enabled: false,
     meta: [
       { name: 'SendPost', src: '/images/sendpost.png', url: 'https://sendpost.io' },
       { name: 'Amazon', src: '/images/amazon.png', url: 'https://amazon.in' },
@@ -96,15 +96,15 @@ export default {
         uses: 'uses',
         resume: 'résumé',
         buyMeACoffee: 'buy me a beer',
-        signIn: 'sign in',
-        signOut: 'sign out'
+        //signIn: 'sign in',
+        //signOut: 'sign out'
       },
       hero: {
-        iBlogTech: 'i blog tech',
+        iBlogTech: 'I write on medium',
         haveALook: 'have a look',
         friendlyNeighborhood: 'your friendly neighborhood',
-        description: 'i am a software engineer and a part time freelancer. i blog tech, write a weekend newsletter called software shots, and tinker with side projects every now n then.',
-        words: ['developer', 'designer', 'engineer', 'programmer', 'encoder'],
+        description: 'I am a Front End developer, UX designer specializing in Graphics/Visual Design and a part time freelancer. I write a few articles about my interests monthly, and tinker with side projects every now and then.',
+        words: ['developer', 'designer', 'engineer', 'programmer', 'writer'],
       },
       githubCalendar: {
         header: 'contributions',
