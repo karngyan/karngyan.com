@@ -4,7 +4,7 @@
 [context.production]
   command = "make production"
   [context.production.environment]
-    ACCESS_TOKEN = 7-7J14HoZUl8-Wg-ICSOsAA3UqnRFJaZ3WeqdzjX5DM
+    ACCESS_TOKEN = "AUTH_DOMAIN"
   # Deploys from main branch run this plugin in the build.
   # Plugins context requires double brackets.
   [[context.production.plugins]]
@@ -14,7 +14,7 @@
 # All deploys generated from a pull/merge request
 # will inherit these settings.
 [context.deploy-preview.environment]
-  ACCESS_TOKEN = 7-7J14HoZUl8-Wg-ICSOsAA3UqnRFJaZ3WeqdzjX5DM
+  ACCESS_TOKEN = "AUTH_DOMAIN"
 
 # Branch deploy context:
 # All deploys that are not from a pull/merge request
