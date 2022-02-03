@@ -40,8 +40,8 @@ export default {
     enabled: true,
   },
   resume: {
-    enabled: false,
-    pdfUrl: '/RESUME_GYAN_KARN_DARK.pdf' // add files in static folder
+    enabled: true,
+    pdfUrl: '/My resume.pdf' // add files in static folder
   },
   uses: {
     enabled: false,
@@ -112,7 +112,7 @@ export default {
       },
       blog: {
         header: 'blog',
-        subtext: 'i try to write once in a while. let me know your thoughts in comments or mail@karngyan.com'
+        subtext: 'i try to write once in a while'
       },
       recentBlog: {
         header: 'recent blogs',
