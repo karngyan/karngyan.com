@@ -4,7 +4,7 @@ export default {
   name: 'Malloy',
   domain: 'mallovelli.netlify.app', // add without https:// , used in meta tags and share urls
   image: '/images/Bigheadmallovelli.png',
-  email: 'mokut.okon@gmail.com',
+  email: 'mokut.okon4@gmail.com',
   googleAnalyticsV4: {
     enabled: false,
     id: 'G-MNDKB1HST9'
@@ -41,7 +41,7 @@ export default {
   },
   resume: {
     enabled: true,
-    pdfUrl: '/My resume.pdf' // add files in static folder
+    pdfUrl: '/mallovelliResume.pdf' // add files in static folder
   },
   uses: {
     enabled: true,
