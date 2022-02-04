@@ -3,7 +3,7 @@ id: 4
 title: streamViewer
 description: website showing stream stat of selected channels/users
 tech: html css javascript jquery
-logo: /MALLOVELLI(1).png
+logo: /MALLOVELLI2.svg
 website: https://codepen.io/bigMalloy/pen/oNoNzXN
 github: https://github.com/mallovelli/twitch-api-for-streamstats
 twitter: mallovelli
