@@ -1,12 +1,12 @@
 ---
 id: 2
-title: covidhelp.page
-description: it helped match plasma and blood donors, i18n supported with 5 indian languages. also had a vaccine notifier built in
-tech: golang vue aws
+title: javascript.calc
+description: random scientific calculations on the web
+tech: javascript css html
 logo: /images/covidhelp-page.png
-website: https://covidhelp.page
-github: https://github.com/karngyan/covidhelp.ui
-twitter: gyankarn
+website: https://codepen.io/bigMalloy/pen/NWgqEre
+github: https://github.com/mallovelli/Javascript-Calculator
+twitter: mallovelli
 ---
 
 # Creten se ad guttur aquis oracula cineres
