@@ -1,12 +1,12 @@
 ---
 id: 4
-title: karngyan.com
-description: developer oriented portfolio website template for devs to quickly setup a blog and showcase projects
-tech: nuxt tailwindcss
-logo: /images/karngyan-com.png
-website: https://karngyan.com
-github: https://github.com/karngyan/karngyan.com
-twitter: gyankarn
+title: streamViewer
+description: website showing stream stat of selected channels/users
+tech: html css javascript jquery
+logo: /MALLOVELLI(1).png
+website: https://codepen.io/bigMalloy/pen/oNoNzXN
+github: https://github.com/mallovelli/twitch-api-for-streamstats
+twitter: mallovelli
 ---
 
 # Sustinet possit referamus caeca
