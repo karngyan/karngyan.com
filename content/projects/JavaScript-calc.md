@@ -2,7 +2,7 @@
 id: 2
 title: JavaScript.calc
 description: Random Scientific calculations on the web
-tech: JavaScript css html
+tech: javascript css html
 logo: /images/covidhelp-page.png
 website: https://codepen.io/bigMalloy/pen/NWgqEre
 github: https://github.com/mallovelli/Javascript-Calculator
