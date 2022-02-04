@@ -1,12 +1,12 @@
 ---
 id: 1
-title: get.interviewready.io
-description: a system design course website serving 5k+ users, content provided by youtuber gaurav sen. (freelance)
-tech: golang nuxt postgres aws
+title: weatherApp
+description: a simple weather app showing the current weather conditions at your location. Implementing Apis
+tech: javascript css html jquery
 logo: /images/interviewready-io.png
-website: https://get.interviewready.io
-github: https://github.com/InterviewReady
-twitter: gyankarn
+website: https://codepen.io/bigMalloy/pen/Yzrbqdw
+github: https://github.com/mallovelli/Weather-app
+twitter: mallovelli
 ---
 
 # Sed etiam fuit oraque est
