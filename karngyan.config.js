@@ -102,7 +102,7 @@ export default {
       hero: {
         iBlogTech: 'I write about my travels',
         haveALook: 'have a look',
-        friendlyNeighborhood: 'your not so friendly nieghbourhood',
+        friendlyNeighborhood: 'your not so friendly neighbourhood',
         description: 'I am a Front End developer, UX designer specializing in Graphics/Visual Design and a part time freelancer. I write a few articles about my interests monthly, and tinker with side projects every now and then.',
         words: ['developer', 'designer', 'engineer', 'programmer', 'writer', 'photographer'],
       },
