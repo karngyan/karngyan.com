@@ -3,7 +3,7 @@
 export default {
   name: 'Malloy',
   domain: 'mallovelli.netlify.app', // add without https:// , used in meta tags and share urls
-  image: '/images/bigheadkarngyan.png',
+  image: '/images/Bigheadmallovelli.png',
   email: 'mokut.okon@gmail.com',
   googleAnalyticsV4: {
     enabled: true,
