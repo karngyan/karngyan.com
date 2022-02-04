@@ -6,7 +6,7 @@ export default {
   image: '/images/Bigheadmallovelli.png',
   email: 'mokut.okon@gmail.com',
   googleAnalyticsV4: {
-    enabled: true,
+    enabled: false,
     id: 'G-MNDKB1HST9'
   },
   plausibleAnalytics: {
