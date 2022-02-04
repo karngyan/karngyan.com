@@ -82,7 +82,7 @@ const nuxtConfig = {
       { property: 'twitter:image', content: `${config.image}` },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/MALLOVELLI.svg' },
       { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css'}
     ],
   },
