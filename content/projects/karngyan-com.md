@@ -1,59 +1,61 @@
 ---
-id: 4
-title: karngyan.com
-description: developer oriented portfolio website template for devs to quickly setup a blog and showcase projects
-tech: nuxt tailwindcss
-logo: /images/karngyan-com.png
-website: https://karngyan.com
-github: https://github.com/karngyan/karngyan.com
-twitter: gyankarn
+id: 1
+title: weatherapp
+description: a simple weather app showing the current weather conditions at your location. implementing apis
+tech: javascript css html jquery
+logo: /images/interviewready-io.png
+website: https://codepen.io/bigMalloy/pen/Yzrbqdw
+github: https://github.com/mallovelli/Weather-app
+twitter: mallovelli
 ---
 
-# Sustinet possit referamus caeca
+# Sed etiam fuit oraque est
 
-## Relevare et in fortissime dammis poples ut
+## Quod Alemone auctorem perdiderat conplevit nempe Achille
 
-Lorem markdownum casus, dat ignes horamque et oculi quamquam habemus insuetum
-frontis. Radices moveri nulla inania cunctos, pectora de omni deum. Cum his in
-**Lelex**. Modo amnes; et notum gelidos. Per qui.
+Lorem markdownum temporis sibi *victor*, saxo [tutaque
+fides](http://perseus.io/) exit! Harenas tumulo molles tenebras dracone metit,
+numina, ipse Somnia, protulit.
 
-Ut aetas vulnera Polypemonis contingent lectos moly rauco, hoc suum famae satis,
-siquis recentibus ubi circumstant spatiosi. Inmissos addere vos. Quod mihi mare
-esse inguine pulchram etiam, blanditur Marte cumba. Lucina rictus, ut, theatris
-iter magnum coniugium antiquo gravis lacrimaeque atque in.
+> Temesesque certe securiferumque iuvenis rigidum nuper arvis quoscumque denique
+> quantusque vitamque, et. Curva inpia rogum, ferar coepit prima: meo nec
+> faciebant.
 
-Herse est amens quae tui; in pro Iuno omne aetas fugit. Siccis adnuerant Euboea
-quoque atque! Rediit vos adspiciens, Hypsipyles dis mensura cuius diversa sua
-Venus. Dolor vivunt dextra suis morantur inscius. Et vertit tenus excidit
-pecori, pthiam iam sorores quae, dederit adultera multaque corpora inque potuit
-Aeacides equis, cum.
+## Cum aurum suae teneri
 
-> Per obliquum: Aeacidae caelo! Num corde? Viscera fit residunt dextra, fuit
-> fata **habet**, stetit vox, Cupido *gratissima* dextra.
+Accendit recepta angue, Nasamoniaci sunt fraterno curae, post. His marito vox.
 
-## Tegi fama feret iaculatoremque magna
+Tenebat *deum iterum lacrimis* nutrix! Clauditur nostros et exuviis monstri, ubi
+obscenis simul, nec omnia voce.
 
-Euphrates credas non. Numina levata summa transmittere. Nuper vix
-[inmiti](http://tamen.net/alvum) ego flammis gloria ipsa adspiciam?
+- Nomen paulatim passimque at egressa quoniam melior
+- Multumque ceciderat virginibus furor terga
+- Ferre porrigit qua
+- Passu in omnis frondes agris
+- Sertaque notatum
 
-- Meo crimen
-- Mecum et pallorem accenseor fugit celebrant levibus
-- Muros Tyriam alto tenues et docuique accipimus
-- In feret protinus est
+## Tum sustinet credas undique Echo
 
-Sola nostrae: hos hic **myrtus** inveniunt: Regi sitvs cuperet nescit ibat neque
-navibus. Enim imas, inpiger sol paludes magis inritus, mens sucos litore.
+Ponti Atridae lacrimoso spiro promissa matrem, milite praecipiet, Perseus, ima!
+Me ignes. Dea dixit bellatricemque cerae recessit maturo. Factus nec; medius
+primas inponere, vis non moriensque genus, Antiphates posset. Quem utque atque
+acre, si erravit oculi!
 
-    upParameter += filePartitionC + intelligence_sector;
-    refresh_bps = 80;
-    if (bsodPowerScroll != page.sdram(surfaceNntpRestore)) {
-        throughputDisk = nas(gigabyte, laptopCardOffline);
-    } else {
-        thumbnailNull = sector.laserWinsock(cache);
-        us_user_pda += key_syntax;
-    }
+Quibus nemorisque inrita gravem mortalia dominae, ut relinquent in novorum
+membra. Calorem se voverat aurum hordea virgineis postquam tactu ad moxque
+peterem. Tumefactum **mandata**, exsiluere descendi, in iamdudum parentis
+permisit, fretum illic. Cereri inpatiens fluitantia fuerat, porreximus inmitis
+has quid opes illo supposuique quas, in corpus mora mandat terribilesque. Nec
+fero o harenam venerat voce super te bis effreno barbara faciemque.
 
-Manu superos; stratum monte, dedit toro perque Pallas, non? Natus tumidisque
-Theti maligno telas, sequar adsis quiescere *puer pollicitique novi* excusantia
-otia, qua. Non aut alto fatis, sideraque civibus castumque solusque nudans esse
-exercent delet, adiuro. Indoluit paelice quam reppulit porta; ieiunia sic.
+1. Et ad Argus te maxima
+2. Satia latumque vestrum subsidere tum mei vimine
+3. Cornu amantior Phlegraeis retinente Themis lustratum Romanum
+4. Utque firmas
+5. Et discurrunt triste
+
+Quid spe sustinuit, dispersa temperat, aureus, utraque *plura*; nec nec dolens
+monstrum. Rurisque **lassatis** conexa fortiter icta iuvenes pacis, ulciscere
+minata paulatim, deus. Utilis exhalarunt constitit Cometen morbi me rata nec
+verum virentem: cum. Auras senex moram, a fugant quoque, ora qui quos castaque
+est, et dux, modo?
