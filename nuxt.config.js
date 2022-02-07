@@ -269,7 +269,7 @@ if (config.blog.enabled) {
   nuxtConfig.modules.unshift('@nuxtjs/feed')
   nuxtConfig.feed = [
     {
-      path: 'https://medium.com/@Mallovelli/feed.xml', // The route to your feed.
+      path: 'feed.xml', // The route to your feed.
       create, // The create function (see below)
       cacheTime: 1000 * 60 * 15, // How long should the feed be cached
       type: 'rss2', // Can be: rss2, atom1, json1
