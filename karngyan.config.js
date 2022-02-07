@@ -3,7 +3,7 @@
 export default {
   name: 'Malloy',
   domain: 'mallovelli.netlify.app', // add without https:// , used in meta tags and share urls
-  image: '/images/Bigheadmallovelli.png',
+  image: '/images/Bigheadmallovelli2.png',
   email: 'mokut.okon4@gmail.com',
   googleAnalyticsV4: {
     enabled: false,
@@ -72,7 +72,7 @@ export default {
     ]
   },
   loadingIndicator: {
-    name: 'rotating-plane'
+    name: 'pulse'
     // https://tobiasahlin.com/spinkit/
     // circle
     // cube-grid
