@@ -11,9 +11,9 @@ tags:
   - ipsum
 category: dev
 author:
-  name: karn
-  twitter: gyankarn
-  image: /images/bigheadkarngyan.png
+  name: Malloy Okon
+  twitter: mallovelli
+  image: /images/Bigheadmallovelli3.png
 ---
 
 Lorem markdownum facinus tollensque aethera acutae ripa arbor duorum, **vae**.
