@@ -3,7 +3,7 @@ id: 1
 title: weatherapp
 description: a simple weather app showing the current weather conditions at your location. implementing apis
 tech: javascript css html jquery
-logo: /images/interviewready-io.png
+logo: /images/
 website: https://codepen.io/bigMalloy/pen/Yzrbqdw
 github: https://github.com/mallovelli/Weather-app
 twitter: mallovelli
