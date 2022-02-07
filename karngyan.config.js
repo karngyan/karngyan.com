@@ -1,7 +1,7 @@
 // Upload files in static/ So any file static/file.pdf -> /file.pdf is accessible at root
 
 export default {
-  name: 'Malloy',
+  name: 'Mokutmfon Okon',
   domain: 'mallovelli.netlify.app', // add without https:// , used in meta tags and share urls
   image: '/images/Bigheadmallovelli2.png',
   email: 'mokut.okon4@gmail.com',
