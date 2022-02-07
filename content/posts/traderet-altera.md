@@ -11,9 +11,9 @@ tags:
   - ipsum
 category: interview
 author:
-  name: karn
-  twitter: gyankarn
-  image: /images/bigheadkarngyan.png
+  name: malloy
+  twitter: mallovelli
+  image: /images/Bigheadmallovelli3.png
 ---
 
 # Traderet altera id subitis coeunt in haut
