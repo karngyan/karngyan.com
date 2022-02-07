@@ -11,7 +11,7 @@ tags:
   - ipsum
 category: dev
 author:
-  name: Malloy Okon
+  name: malloy 
   twitter: mallovelli
   image: /images/Bigheadmallovelli3.png
 ---
