@@ -13,7 +13,7 @@ twitter: madhavkauntia
 TwitHub is an application where users can sign in using Twitter and then set a banner for their profile.
 Currently, TwitHub supports setting a user's GitHub Contribution Calender as their Twitter Banner.
 
-![Banner](/static/images/twithub-banner.png)
+![Banner](/images/twithub-banner.png)
 
 ## Tech Stack
 
