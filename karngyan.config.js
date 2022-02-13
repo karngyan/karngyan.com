@@ -107,7 +107,7 @@ export default {
         home: "Home",
         blog: "Blog",
         projects: "Projects",
-        uses: "uses",
+        uses: "Uses",
         resume: "Resume",
         buyMeACoffee: "Buy me a beer",
         signIn: "sign in",
