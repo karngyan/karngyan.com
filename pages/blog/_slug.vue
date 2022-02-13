@@ -45,7 +45,11 @@
               </div>
             </div>
             <div class="px-4 sm:px-0 lg:px-4 pb-4 bg-gray-900 rounded-lg">
-              <a href=`https://twitter.com/${post.author.twitter}`>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                :href="`https://twitter.com/${post.author.twitter}`"
+              >
                 <div class="flex flex-items-center justify-center rounded-full">
                   <UserAvatar
                     :photoURL="post.author.image"
