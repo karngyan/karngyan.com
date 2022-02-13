@@ -44,18 +44,12 @@ export default {
     pdfUrl: "/Madhav Kauntia_BIT Mesra.pdf" // add files in static folder
   },
   uses: {
-    enabled: false,
+    enabled: true,
     meta: [
-      { title: "OS", value: "macOS Catalina" },
-      { title: "Memory", value: "16 GB 2667 MHz DDR4" },
-      { title: "Keyboard", value: "Keychron K2 - Gateron Brown Keys" },
+      { title: "Laptop", value: "HP Omen 15 (2018)" },
+      { title: "OS", value: "Windows 11 with WSL 1" },
       { title: "Mouse", value: "Logitech Silent Pebble" },
-      { title: "Monitor", value: "LG QHD (2560 x 1440) 27 Inch IPS Display" },
-      {
-        title: "Laptop • Processor • Graphics",
-        value:
-          "MacBook Pro (16-inch, 2019) • 2.6 GHz 6-Core Intel Core i7 • AMD Radeon Pro 5300M 4 GB + Intel UHD Graphics 630 1536 MB"
-      }
+      { title: "Monitor", value: "Dell U2415 UltraSharp 24inch" }
     ]
   },
   workedAt: {
@@ -124,7 +118,7 @@ export default {
         haveALook: "Have a look",
         friendlyNeighborhood: "Madhav Kauntia",
         description:
-          "I am a software engineer. My primary focus is backend engineering. I like to learn new technologies by working on side projects. I also blog my learnings.",
+          "I am a full stack web developer who likes to learn new technologies by working on side projects. I also blog things I learn along the way.",
         words: ["developer", "engineer", "programmer", "wagmi"]
       },
       githubCalendar: {
@@ -147,8 +141,7 @@ export default {
       },
       projects: {
         header: "projects",
-        subtext:
-          "This page lists some of my personal and work projects."
+        subtext: "This page lists some of my personal and work projects."
       },
       recommendations: {
         header: "recommendations",
