@@ -2,7 +2,7 @@
 id: 3
 title: Failure Resume
 description: Create a failure resume to document your failures and the lessons you learnt from them.
-tech: nextjs mongodb
+tech: nextjs mongodb react js
 logo: /images/twithub.svg
 website: https://failureresume.co
 github: https://github.com/MadhavKauntia/failure-resume

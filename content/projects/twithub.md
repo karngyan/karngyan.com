@@ -2,7 +2,7 @@
 id: 2
 title: TwitHub
 description: Generate realtime banners for your Twitter profile
-tech: react node express
+tech: react node express mongodb js
 logo: /images/twithub.svg
 website: https://twithub.xyz
 twitter: madhavkauntia
