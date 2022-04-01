@@ -46,10 +46,17 @@ export default {
   uses: {
     enabled: true,
     meta: [
-      { title: "Laptop", value: "HP Omen 15 (2018)" },
+      { title: "Personal Laptop", value: "HP Omen 15 (2018)" },
+      { title: "Work Laptop", value: "MacBook Pro (16-inch, 2019)" },
       { title: "OS", value: "Windows 11 with WSL 1" },
       { title: "Mouse", value: "Logitech Silent Pebble" },
-      { title: "Monitor", value: "Dell U2415 UltraSharp 24inch" }
+      { title: "Keyboard", value: "Redgear Shadow Blade Mechanical Keyboard" },
+      { title: "Monitor", value: "Dell U2415 UltraSharp 24inch" },
+      { title: "E-Reader", value: "Kindle (10th Gen)" },
+      { title: "Phone", value: "OnePlus Nord 2" },
+      { title: "Earphones", value: "OnePlus Buds Z" },
+      { title: "Desk", value: "Wakefit Athena Engineered Wood Study Table" },
+      { title: "Fitness Band", value: "MI Smart Band 5" }
     ]
   },
   workedAt: {
@@ -119,7 +126,7 @@ export default {
         friendlyNeighborhood: "Madhav Kauntia",
         description:
           "I am a full stack web developer who likes to learn new technologies by working on side projects. I also blog things I learn along the way.",
-        words: ["developer", "engineer", "programmer", "wagmi"]
+        words: ["developer", "engineer", "programmer"]
       },
       githubCalendar: {
         header: "contributions",
@@ -128,7 +135,7 @@ export default {
       blog: {
         header: "blog",
         subtext:
-          "I try to write once in a while. Let me know your thoughts at mkauntia@gmail.com"
+          "I try to write once in a while. Let me know your thoughts at mkauntia@gmail.com."
       },
       recentBlog: {
         header: "recent blogs",
@@ -137,7 +144,7 @@ export default {
       uses: {
         header: "uses",
         subtext:
-          "a quick summary of what I use on a daily basis to code and some codestats.net flex"
+          "The tools and services I use to get things done. Also, some codestats.net flex."
       },
       projects: {
         header: "projects",
