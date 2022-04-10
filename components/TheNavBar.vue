@@ -27,6 +27,9 @@
         </div>
       </div>
       <div class="hidden md:flex flex-row space-x-2 items-center justify-center">
+        <div v-if="$config.laguageSwitcher.enabled">
+          <nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)" class="text-gray-300 hover:text-white" >{{ locale.name }}</nuxt-link>
+        </div>
         <div v-if="$config.firebase.enabled">
           <div v-if="!user" @click="signInUser" class="active cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.signIn')}}</div>
           <div v-else @click="signOutUser" class="active cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.signOut')}}</div>
@@ -93,6 +96,9 @@ export default {
   computed: {
     user() {
       return this.$store.state.user
+    },
+    availableLocales () {
+      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
     }
   },
   data() {

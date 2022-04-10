@@ -86,6 +86,9 @@ export default {
     // three-bounce
     // wandering-cubes
   },
+  laguageSwitcher: {
+    enabled: true,
+  },
   strings: {
     en_US: {
       download: 'download',
