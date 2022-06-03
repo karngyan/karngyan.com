@@ -5,6 +5,7 @@ description: Generate realtime banners for your Twitter profile
 tech: react node express
 logo: /images/twithub.svg
 website: https://twithub.xyz
+github: https://github.com/MadhavKauntia/twithub
 twitter: madhavkauntia
 ---
 
