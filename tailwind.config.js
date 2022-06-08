@@ -1,5 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-
+// sample text
 module.exports = {
   purge: [
     './src/**/*.html',
