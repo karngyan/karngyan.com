@@ -41,7 +41,7 @@ export default {
   },
   resume: {
     enabled: true,
-    pdfUrl: "/Madhav Kauntia_BIT Mesra.pdf" // add files in static folder
+    pdfUrl: "/Madhav Kauntia.pdf" // add files in static folder
   },
   uses: {
     enabled: true,
