@@ -10,11 +10,11 @@ export default {
     id: ""
   },
   plausibleAnalytics: {
-    enabled: false,
-    domain: "template.karngyan.com",
+    enabled: true,
+    domain: "madhavkauntia.com",
     trackLocalhost: false,
     // leave it empty if plausible is not self hosted
-    apiHost: "https://analytics.lookatx.dev" // default: https://plausible.io
+    apiHost: "https://plausible.io" // default: https://plausible.io
   },
   // enable if you want comments and likes on posts
   // see how it looks on karngyan.com
