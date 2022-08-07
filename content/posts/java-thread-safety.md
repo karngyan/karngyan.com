@@ -11,7 +11,7 @@ author:
   name: Madhav
   twitter: madhavkauntia
   image: /images/madhav.jpeg
-description: Writing correct programs is hard, writing correct concurrent programs is harder. In this article, I discuss thread safety in Spring Boot applicationss.
+description: Writing correct programs is hard, writing correct concurrent programs is harder. In this article, I discuss thread safety in Spring Boot applications.
 ---
 
 Writing correct programs is hard, writing correct concurrent programs is harder.
