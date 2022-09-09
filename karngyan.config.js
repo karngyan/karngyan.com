@@ -4,7 +4,7 @@ export default {
   name: "Madhav Kauntia",
   domain: "madhavkauntia.com", // add without https:// , used in meta tags and share urls
   image: "/images/madhav.jpeg",
-  email: "mkauntia@gmail.com",
+  email: "mail@madhavkauntia.com",
   googleAnalyticsV4: {
     enabled: false,
     id: ""
