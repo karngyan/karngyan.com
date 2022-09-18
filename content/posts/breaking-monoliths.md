@@ -20,7 +20,7 @@ description: In this article, I talk about the why's and how's of breaking a mon
 > The longer an engineer works across a ton of micro-services, the more they yearn for the days of working in a monolith.
 > The grass is always greener.
 
-More often than not, there's comes a point in the lifecycle of a codebase when it needs to be broken up from a monolith to a bunch of microservices. In the initial phases of development, it's easier to simply _build_ to get to an MVP, without paying much attentioh to the mountain of technical debt racking up. However, there comes a tipping point when breaking the monolith becomes necessary not just to be able to manage the codebase but also to increase the overall productivity of the team.
+More often than not, there's comes a point in the lifecycle of a codebase when it needs to be broken up from a monolith to a bunch of microservices. In the initial phases of development, it's easier to simply _build_ to get to an MVP, without paying much attention to the mountain of technical debt racking up. However, there comes a tipping point when breaking the monolith becomes necessary not just to be able to manage the codebase but also to increase the overall productivity of the team.
 
 Before we move on to why migrating from monoliths to microservices might be a good idea, let's first understand what exactly a _microservice ecosystem_ is. Microservices ecosystem is a platform of services each encapsulating a business capability. Each microservice has an independent lifecycle. A developer can build, test and deploy each microservice independently.
 
