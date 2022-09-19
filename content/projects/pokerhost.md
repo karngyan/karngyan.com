@@ -1,7 +1,7 @@
 ---
 id: 4
 title: PokerHost
-description: Find and host poker games in your city.
+description: "[WIP] Find and host poker games in your city."
 tech: nextjs spring-boot mysql aws
 logo: /images/pokerhost.svg
 website: https://pokerhost.vercel.app/
