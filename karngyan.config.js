@@ -47,15 +47,17 @@ export default {
     enabled: true,
     meta: [
       { title: "Personal Laptop", value: "HP Omen 15 (2018)" },
-      { title: "Work Laptop", value: "MacBook Pro (16-inch, 2019)" },
+      { title: "Work Laptop", value: "MacBook Pro (14-inch, 2021)" },
       { title: "OS", value: "Windows 11 with WSL 1" },
-      { title: "Mouse", value: "Logitech Silent Pebble" },
-      { title: "Keyboard", value: "Redgear Shadow Blade Mechanical Keyboard" },
-      { title: "Monitor", value: "Dell U2415 UltraSharp 24inch" },
+      { title: "Memory", value: "16 GB 2667 MHz DDR4" },
+      { title: "Keyboard", value: "Logitech MX Keys Advanced" },
+      { title: "Mouse", value: "Logitech MX Master 2S" },
       { title: "E-Reader", value: "Kindle (10th Gen)" },
       { title: "Phone", value: "OnePlus Nord 2" },
       { title: "Earphones", value: "OnePlus Buds Z" },
+      { title: "Headphones", value: "JBL T460BT by Harman" },
       { title: "Desk", value: "Wakefit Athena Engineered Wood Study Table" },
+      { title: "Chair", value: "Mika Leatherette Study Chair (White)" },
       { title: "Fitness Band", value: "MI Smart Band 5" }
     ]
   },
