@@ -46,7 +46,12 @@
             {{ item.title }}
           </dt>
           <dd class="mt-1 text-sm leading-5 text-gray-400 sm:mt-0 sm:col-span-2">
-            {{ item.value }}
+            <a v-if="item.link !== undefined" :href="`${item.link}`" target="_blank" rel="noreferrer" class="hover:text-hot-pink">
+              {{ item.value }}
+            </a>
+            <a v-if="item.link === undefined">
+              {{ item.value }}
+            </a>
           </dd>
         </div>
       </dl>
