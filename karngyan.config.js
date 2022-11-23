@@ -48,7 +48,7 @@ export default {
     meta: [
       { title: "Laptop", value: "MacBook Pro M1 (14-inch, 2021)" },
       { title: "OS", value: "macOS Ventura" },
-      { title: "Memory", value: "32 GB 2667 MHz DDR4" },
+      { title: "Memory", value: "32 GB LPDDR5" },
       { title: "Mouse", value: "Logitech MX Master 3S" },
       { title: "E-Reader", value: "Kindle (10th Gen)" },
       { title: "Phone", value: "OnePlus Nord 2" },
