@@ -66,6 +66,11 @@ export default {
     enabled: true,
     meta: [
       {
+        name: "Headout",
+        src: "/images/headout.png",
+        url: "https://headout.com"
+      },
+      {
         name: "Walmart",
         src: "/images/walmart.png",
         url: "https://walmart.com"
