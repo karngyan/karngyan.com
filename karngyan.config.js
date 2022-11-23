@@ -65,7 +65,7 @@ export default {
     meta: [
       {
         name: "Headout",
-        src: "/images/headout.png",
+        src: "/images/headout.svg",
         url: "https://headout.com"
       },
       {
