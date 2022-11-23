@@ -46,12 +46,10 @@ export default {
   uses: {
     enabled: true,
     meta: [
-      { title: "Personal Laptop", value: "HP Omen 15 (2018)" },
-      { title: "Work Laptop", value: "MacBook Pro (14-inch, 2021)" },
-      { title: "OS", value: "Windows 11 with WSL 1" },
-      { title: "Memory", value: "16 GB 2667 MHz DDR4" },
-      { title: "Keyboard", value: "Logitech MX Keys Advanced" },
-      { title: "Mouse", value: "Logitech MX Master 2S" },
+      { title: "Laptop", value: "MacBook Pro M1 (14-inch, 2021)" },
+      { title: "OS", value: "macOS Ventura" },
+      { title: "Memory", value: "32 GB 2667 MHz DDR4" },
+      { title: "Mouse", value: "Logitech MX Master 3S" },
       { title: "E-Reader", value: "Kindle (10th Gen)" },
       { title: "Phone", value: "OnePlus Nord 2" },
       { title: "Earphones", value: "OnePlus Buds Z" },
@@ -65,6 +63,11 @@ export default {
     // add logos in static and at max add 3/4
     enabled: true,
     meta: [
+      {
+        name: "Headout",
+        src: "/images/headout.svg",
+        url: "https://headout.com"
+      },
       {
         name: "Walmart",
         src: "/images/walmart.png",
