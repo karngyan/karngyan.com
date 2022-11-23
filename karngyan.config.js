@@ -19,7 +19,7 @@ export default {
   // enable if you want comments and likes on posts
   // see how it looks on karngyan.com
   firebase: {
-    enabled: true
+    enabled: false
   },
   social: {
     github: "madhavkauntia",
@@ -46,17 +46,17 @@ export default {
   uses: {
     enabled: true,
     meta: [
-      { title: "Laptop", value: "MacBook Pro M1 (14-inch, 2021)" },
-      { title: "OS", value: "macOS Ventura" },
-      { title: "Memory", value: "32 GB LPDDR5" },
-      { title: "Mouse", value: "Logitech MX Master 3S" },
-      { title: "E-Reader", value: "Kindle (10th Gen)" },
-      { title: "Phone", value: "OnePlus Nord 2" },
-      { title: "Earphones", value: "OnePlus Buds Z" },
-      { title: "Headphones", value: "JBL T460BT by Harman" },
-      { title: "Desk", value: "Wakefit Athena Engineered Wood Study Table" },
-      { title: "Chair", value: "Mika Leatherette Study Chair (White)" },
-      { title: "Fitness Band", value: "MI Smart Band 5" }
+      { title: "Laptop", value: "MacBook Pro M1 (14-inch, 2021)", link: "https://www.apple.com/in/shop/buy-mac/macbook-pro/14-inch-macbook-pro" },
+      { title: "OS", value: "macOS Ventura", link: "https://www.apple.com/in/macos/ventura/" },
+      { title: "Memory", value: "32 GB LPDDR5", link: "" },
+      { title: "Mouse", value: "Logitech MX Master 3S", link: "https://www.amazon.in/Logitech-MX-Master-3S-Chrome-Graphite/dp/B0B11LJ69K/ref=sr_1_2?crid=1NHOVPXV7CN0J&keywords=mx%2Bmaster%2B3s&qid=1669211809&qu=eyJxc2MiOiIyLjM2IiwicXNhIjoiMS44NyIsInFzcCI6IjEuODUifQ%3D%3D&sprefix=mx%2Bmaster%2B3%2Caps%2C261&sr=8-2&th=1" },
+      { title: "E-Reader", value: "Kindle (10th Gen)", link: "https://www.amazon.in/Kindle-10th-Gen/dp/B07FQ4Q7MB" },
+      { title: "Phone", value: "OnePlus Nord 2", link: "https://www.amazon.in/gp/product/B097RDF6NW/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1" },
+      { title: "Earphones", value: "OnePlus Buds Z", link: "https://www.flipkart.com/oneplus-buds-z-bluetooth-headset/p/itm19b979ac03b7a?pid=ACCFVA3GNUZQZEHZ&lid=LSTACCFVA3GNUZQZEHZNZJSET" },
+      { title: "Headphones", value: "JBL T460BT by Harman", link: "https://www.amazon.in/gp/product/B077T4737M/ref=ppx_yo_dt_b_search_asin_image?ie=UTF8&psc=1" },
+      { title: "Desk", value: "Wakefit Athena Engineered Wood Study Table", link: "https://www.amazon.in/Wakefit-Athena-Study-Table-Columbian/dp/B08QGXGWT3/ref=sr_1_3?keywords=wakefit+athena&qid=1669212813&qu=eyJxc2MiOiIxLjUxIiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&sr=8-3" },
+      { title: "Chair", value: "Mika Leatherette Study Chair (White)", link: "https://www.urbanladder.com/products/mika-study-chair" },
+      { title: "Fitness Band", value: "MI Smart Band 5", link: "https://www.amazon.in/Smart-AMOLED-Display-Battery-Resistant/dp/B08GXC2NTX/ref=sr_1_1?crid=37AKNHVE2SBAS&keywords=mi+band+5&qid=1669212871&qu=eyJxc2MiOiIzLjI3IiwicXNhIjoiMS44MyIsInFzcCI6IjEuMzAifQ%3D%3D&sprefix=mi+band+%2Caps%2C222&sr=8-1" }
     ]
   },
   workedAt: {
