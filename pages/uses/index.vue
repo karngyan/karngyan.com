@@ -49,7 +49,7 @@
             <a v-if="item.link !== undefined" :href="`${item.link}`" target="_blank" rel="noreferrer" class="hover:text-hot-pink">
               {{ item.value }}
             </a>
-            <a v-if="item.link === undefined">
+            <a v-else>
               {{ item.value }}
             </a>
           </dd>
