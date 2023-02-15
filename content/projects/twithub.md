@@ -4,7 +4,7 @@ title: TwitHub
 description: Generate realtime banners for your Twitter profile
 tech: react node express mongodb js
 logo: /images/twithub.svg
-website: https://twithub.xyz
+website: https://twithub-react.netlify.app/
 github: https://github.com/MadhavKauntia/twithub
 twitter: madhavkauntia
 ---
@@ -12,9 +12,11 @@ twitter: madhavkauntia
 ## About
 
 TwitHub is an application where users can sign in using Twitter and then set a banner for their profile.
-Currently, TwitHub supports setting a user's GitHub Contribution Calender as their Twitter Banner along with a header and a description.
+Currently, TwitHub supports setting a user's GitHub Contribution Calendar as their Twitter Banner along with a header and a description.
 
 ![Banner](/images/twithub-banner.png)
+
+Update: Since the backend was deployed on Heroku, this project is no longer operational.
 
 ## Tech Stack
 
