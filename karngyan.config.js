@@ -55,7 +55,7 @@ export default {
       { title: "Phone", value: "OnePlus Nord 2", link: "https://www.amazon.in/gp/product/B097RDF6NW/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1" },
       { title: "Earphones", value: "OnePlus Buds Z", link: "https://www.flipkart.com/oneplus-buds-z-bluetooth-headset/p/itm19b979ac03b7a?pid=ACCFVA3GNUZQZEHZ&lid=LSTACCFVA3GNUZQZEHZNZJSET" },
       { title: "Headphones", value: "JBL T460BT by Harman", link: "https://www.amazon.in/gp/product/B077T4737M/ref=ppx_yo_dt_b_search_asin_image?ie=UTF8&psc=1" },
-      { title: "Desk", value: "Wakefit Athena Engineered Wood Study Table", link: "https://www.amazon.in/Wakefit-Athena-Study-Table-Columbian/dp/B08QGXGWT3/ref=sr_1_3?keywords=wakefit+athena&qid=1669212813&qu=eyJxc2MiOiIxLjUxIiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&sr=8-3" },
+      { title: "Desk", value: "Linak Electric Height Adjustable Table", link: "https://www.linak.com/business-areas/desks/office-desks/" },
       { title: "Chair", value: "Mika Leatherette Study Chair (White)", link: "https://www.urbanladder.com/products/mika-study-chair" },
       { title: "Fitness Band", value: "MI Smart Band 5", link: "https://www.amazon.in/Smart-AMOLED-Display-Battery-Resistant/dp/B08GXC2NTX/ref=sr_1_1?crid=37AKNHVE2SBAS&keywords=mi+band+5&qid=1669212871&qu=eyJxc2MiOiIzLjI3IiwicXNhIjoiMS44MyIsInFzcCI6IjEuMzAifQ%3D%3D&sprefix=mi+band+%2Caps%2C222&sr=8-1" }
     ]
