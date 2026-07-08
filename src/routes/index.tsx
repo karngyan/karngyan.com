@@ -15,15 +15,15 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/social-icons'
-import image1 from '@/assets/photos/image-1.jpg'
-import image2 from '@/assets/photos/image-2.jpg'
-import image3 from '@/assets/photos/image-3.jpg'
-import image4 from '@/assets/photos/image-4.jpg'
-import image5 from '@/assets/photos/image-5.jpg'
-import image6 from '@/assets/photos/image-6.jpg'
-import image7 from '@/assets/photos/image-7.jpg'
-import image8 from '@/assets/photos/image-8.jpg'
-import image9 from '@/assets/photos/image-9.jpg'
+import image1 from '@/assets/photos/photo-1.jpg'
+import image2 from '@/assets/photos/photo-2.jpg'
+import image3 from '@/assets/photos/photo-3.jpg'
+import image4 from '@/assets/photos/photo-4.jpg'
+import image5 from '@/assets/photos/photo-5.jpg'
+import image6 from '@/assets/photos/photo-6.jpg'
+import image7 from '@/assets/photos/photo-7.jpg'
+import image8 from '@/assets/photos/photo-8.jpg'
+import image9 from '@/assets/photos/photo-9.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/format-date'
 import { cn } from '@/lib/utils'
@@ -389,30 +389,14 @@ function Home() {
         <div className="max-w-2xl">
           {/* ✏️ Edit your hero heading and intro below */}
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            I ship code, review PRs, and walk the dog. Not always in that order.
+            Software engineer, writer, and serial side-project starter.
           </h1>
           <p className="mt-6 text-base text-muted-foreground">
-            I'm Karn - Senior Software Engineer on the In-App &amp; AI teams at{' '}
-            <a
-              href="https://customer.io?utm_source=karngyan.com&utm_medium=referral&utm_campaign=personal_site"
-              target="_blank"
-              rel="noreferrer"
-              className="text-foreground underline decoration-muted-foreground/40 underline-offset-2 transition hover:decoration-foreground"
-            >
-              Customer.io
-            </a>
-            . I build product experiences end-to-end - from system design to
-            production - with bias towards Go, and React. On the side, I build
-            courses for engineers at{' '}
-            <a
-              href="https://karnstack.com"
-              target="_blank"
-              rel="noreferrer"
-              className="text-foreground underline decoration-muted-foreground/40 underline-offset-2 transition hover:decoration-foreground"
-            >
-              karnstack.com
-            </a>
-            . Based in Bengaluru, India.
+            I'm a developer who loves building things end-to-end - from the
+            first sketch to production. This site is my corner of the internet:
+            articles about what I'm learning, projects I'm hacking on, and the
+            tools I use every day. It's built from a free, open-source template
+            - fork it and make it yours.
           </p>
           <div className="mt-6 flex gap-6">
             {siteConfig.social.x && (

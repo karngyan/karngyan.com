@@ -84,216 +84,68 @@ function Uses() {
           Software I use, gear I rely on, and things I recommend.
         </h1>
         <p className="mt-6 text-base text-muted-foreground">
-          I get asked a lot about what I use to build software, stay productive,
-          or buy to fool myself into thinking I'm being productive when I'm
-          really just procrastinating. Here's a reasonably complete list.
+          A living list of the hardware and software I use to build things,
+          stay productive, or convince myself I'm being productive while
+          procrastinating. Swap in your own setup.
         </p>
       </header>
 
       <div className="mt-16 sm:mt-20 space-y-20">
         <Section title="Workstation">
-          <Tool title="MacBook Pro M4 Max, 36 GB, 16-inch, 1 TB SSD (Nov 2024)">
-            The jump from Intel to Apple Silicon was already wild, but M4 Max
-            takes it further. Compiles are instant, the fans are silent, and
-            I've never once felt the machine sweat. Best laptop I've owned.
+          <Tool title="14-inch laptop, plenty of RAM">
+            Whatever machine you have is enough - but a fast compile loop and a
+            silent fan make long coding sessions a lot more pleasant.
           </Tool>
-          <Tool
-            title="LG Ergo 4K 34-inch + LG 27-inch 2K"
-            href="https://www.lg.com"
-          >
-            I run a dual-monitor setup. The 34-inch 4K handles most of my work -
-            terminal, editor, browser all at once. The 27-inch 2K sits above for
-            docs, Slack, or a second browser window. My wife inherited the old
-            MSI ultrawide when I upgraded - she's a backend engineer so it's in
-            good hands.
+          <Tool title="External 4K monitor">
+            One big screen beats two small ones. Editor and terminal
+            side-by-side, browser on the laptop display.
           </Tool>
-          <Tool title="Apple Magic Keyboard">
-            Clean, compact, integrates perfectly with macOS. I have Caps Lock
-            remapped to Escape for Vim muscle memory.
+          <Tool title="Mechanical keyboard">
+            Any board you enjoy typing on. Bonus points for remapping Caps Lock
+            to Escape.
           </Tool>
-          <Tool title="Apple Magic Trackpad">
-            The gestures just click for me. Three-finger swipe between spaces,
-            four-finger swipe for Mission Control - once it's in your muscle
-            memory you can't go back.
-          </Tool>
-          <Tool
-            title="Logitech MX Master 3"
-            href="https://www.logitech.com/en-us/products/mice/mx-master-3s.html"
-          >
-            Great mouse - the horizontal scroll wheel is genuinely useful for
-            wide files and timelines. Hoping to upgrade to the MX Master 4 or
-            something new soon.
-          </Tool>
-          <Tool title="Flowlyf Standing Desk" href="https://flowlyf.com">
-            Electric sit-stand desk. I alternate through the day. Whether it's
-            actually healthier or I'm just optimizing to feel productive, I
-            can't tell anymore - but it feels good.
-          </Tool>
-          <Tool title="Greensoul Chair">
-            Old school but it gets the job done. Probably due for an upgrade -
-            if you have recommendations, let me know.
+          <Tool title="A decent chair">
+            Your back will thank you long before your commit history does.
           </Tool>
         </Section>
 
         <Section title="Development">
-          <Tool title="Cursor" href="https://cursor.sh">
-            My primary editor. Cursor is what finally pulled me away from
-            spending more time configuring Vim than writing code. AI-native
-            editing with a real IDE behind it - hard to argue with.
+          <Tool title="VS Code" href="https://code.visualstudio.com">
+            Reliable, extensible, and the default for a reason. Swap in your
+            editor of choice - the muscle memory matters more than the logo.
           </Tool>
           <Tool title="Ghostty" href="https://ghostty.org">
-            My terminal of choice. Fast, native, and gets out of the way. I have
-            a full tmux setup with Powerlevel10k, zsh-autosuggestions, and fzf.
-            Leader key is Ctrl-A.
-          </Tool>
-          <Tool title="tmux + zsh">
-            Custom tmux config with persistent sessions across the machines I
-            work on. Powerlevel10k for the prompt, zsh-autosuggestions so I
-            rarely have to type full commands twice, and fzf hooked into history
-            search and file navigation.
-          </Tool>
-          <Tool title="TablePlus" href="https://tableplus.com">
-            The best GUI for databases I've found. MySQL, Postgres, Redis - all
-            in one place, clean interface, doesn't feel like enterprise
-            software. Saved me from building a hundred admin panels.
-          </Tool>
-          <Tool title="OrbStack" href="https://orbstack.dev">
-            Replaced Docker Desktop entirely. Faster, lighter, and actually
-            integrates with macOS properly. Also handles local k8s environments
-            well.
+            A fast, native terminal that gets out of the way. Pairs well with
+            tmux and a good shell prompt.
           </Tool>
           <Tool title="Bruno" href="https://www.usebruno.com">
-            Git-friendly API client. Collections live as plain files in the
-            repo, so they version-control naturally alongside the code. Replaced
-            Postman for me entirely.
+            Git-friendly API client - collections live as plain files in the
+            repo, so they version-control naturally alongside the code.
           </Tool>
-          <Tool title="HTTPie CLI" href="https://httpie.io/cli">
-            For quick one-off API calls from the terminal. Much more readable
-            than curl for JSON responses.
-          </Tool>
-          <Tool title="Tailscale" href="https://tailscale.com">
-            Zero-config VPN built on WireGuard. I use it to connect to my
-            homelab from anywhere without poking holes in firewalls. Setup takes
-            minutes and it just works.
-          </Tool>
-        </Section>
-
-        <Section title="Browser">
-          <Tool title="Arc" href="https://arc.net">
-            The browser that actually rethought tabs. Spaces keep work and
-            personal contexts separate, and the command bar makes navigating
-            feel closer to a keyboard-driven editor than a browser.
-          </Tool>
-          <Tool title="Requestly" href="https://requestly.io">
-            Browser extension for intercepting and modifying HTTP requests.
-            Handy for testing redirects, mocking API responses, or overriding
-            headers without spinning up a proxy.
+          <Tool title="OrbStack" href="https://orbstack.dev">
+            Containers and local VMs without the overhead of Docker Desktop.
           </Tool>
         </Section>
 
         <Section title="Design">
           <Tool title="Figma" href="https://figma.com">
-            Where all design work starts. Also doubles as a virtual whiteboard
-            for architecture sketches, async design reviews, and just thinking
-            out loud with diagrams.
-          </Tool>
-          <Tool title="v0 by Vercel" href="https://v0.dev">
-            Useful for quick prototyping when I want to share a rough design
-            idea or generate a component I can then customize. Not a replacement
-            for real design work, but great for the "what if it looked like
-            this?" phase.
-          </Tool>
-        </Section>
-
-        <Section title="Fonts">
-          <Tool
-            title="Figtree"
-            href="https://fonts.google.com/specimen/Figtree"
-          >
-            My preferred font for UI and the web. Geometric sans-serif that
-            reads cleanly at small sizes without feeling cold. This site uses
-            it.
-          </Tool>
-          <Tool title="Menlo">
-            Default macOS monospace font and still the one I keep coming back to
-            in the editor. No ligatures, no fuss - just clear, readable code
-            characters.
-          </Tool>
-        </Section>
-
-        <Section title="AI">
-          <Tool title="Claude" href="https://claude.ai">
-            My go-to for writing, reasoning through complex problems, and code
-            review. Usually more careful and nuanced than GPT for longer
-            context.
-          </Tool>
-          <Tool title="ChatGPT" href="https://chatgpt.com">
-            Still useful, especially for quick lookups and when I want a second
-            opinion. GPT-5 is fast enough to use like a smarter autocomplete.
-          </Tool>
-          <Tool title="Codex" href="https://openai.com/codex">
-            Still early in integrating this into my workflow, but it's promising
-            for longer autonomous coding tasks.
+            Where design work starts - and a great virtual whiteboard for
+            architecture sketches and thinking out loud with diagrams.
           </Tool>
         </Section>
 
         <Section title="Productivity">
-          <Tool title="1Password" href="https://1password.com">
-            Password manager I've used for years. The browser integration and
-            CLI are both solid. I don't think about credentials anymore, which
-            is the point.
-          </Tool>
-          <Tool title="Slack" href="https://slack.com">
-            Work comms. It's everywhere so there's no escaping it - but the
-            keyboard shortcuts and thread model are good enough that I don't
-            mind.
-          </Tool>
-          <Tool title="Linear" href="https://linear.app">
-            Issue tracker that doesn't feel like it was designed to be
-            enterprise software. Fast, keyboard-driven, and the cycle/project
-            model maps well to how I actually think about work. Use it for side
-            projects and freelance.
-          </Tool>
-          <Tool title="YouTube Music" href="https://music.youtube.com">
-            Underrated. The library is massive, it surfaces stuff I wouldn't
-            find on Spotify, and the auto-mix for any artist or song is
-            genuinely good for long coding sessions.
-          </Tool>
           <Tool title="Raycast" href="https://raycast.com">
-            Replaced Spotlight entirely. Launcher, clipboard history, window
-            management, snippets, and a growing extension ecosystem. If you're
-            still using Spotlight, do yourself a favor.
+            Launcher, clipboard history, window management, and snippets. If
+            you're still using the default launcher, do yourself a favor.
           </Tool>
-          <Tool
-            title="Notion Calendar"
-            href="https://notion.so/product/calendar"
-          >
-            Syncs across everything - work calendar, personal, side project
-            stuff. Clean interface and it doesn't try to do too much.
+          <Tool title="A password manager">
+            1Password, Bitwarden, pick one - the point is to never think about
+            credentials again.
           </Tool>
-          <Tool title="Notion" href="https://notion.so">
-            Notes, docs, project tracking, and brain dumps. I use it for both
-            work and personal projects. Also using Notion Mail now for email.
-          </Tool>
-          <Tool title="Cal.com" href="https://cal.com">
-            Open source scheduling that lets me share booking links without
-            giving up control over my time. Self-hostable if you care about
-            that.
-          </Tool>
-        </Section>
-
-        <Section title="Deployment">
-          <Tool title="Railway" href="https://railway.app">
-            My default for side projects and freelance work. Zero infra overhead
-            - push code, it runs. Postgres, Redis, and cron jobs all included.
-          </Tool>
-          <Tool
-            title="Cloudflare Workers"
-            href="https://workers.cloudflare.com"
-          >
-            For edge-deployed functions, APIs, or anything that needs to be
-            globally fast and cheap. The free tier is generous enough that most
-            side projects never need to pay.
+          <Tool title="Plain notes">
+            Notion, Obsidian, or a folder of Markdown files. The system
+            matters less than actually writing things down.
           </Tool>
         </Section>
       </div>

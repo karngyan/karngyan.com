@@ -39,48 +39,43 @@ type Project = {
 // ✏️ Edit your projects below
 const projects: Array<Project> = [
   {
-    name: 'chunkx',
+    name: 'this-website',
     description:
-      'AST-based code chunking library implementing the CAST algorithm. Supports 30+ programming languages via tree-sitter with configurable chunk sizes.',
+      'The site you are looking at right now. TanStack Start, React, Tailwind v4, MDX articles, RSS, and OG image generation - deployed on Cloudflare Workers.',
     link: {
-      href: 'https://github.com/gomantics/chunkx',
-      label: 'gomantics/chunkx',
+      href: 'https://github.com/karngyan/karngyan.com',
+      label: 'karngyan/karngyan.com',
     },
-    language: 'Go',
+    language: 'TypeScript',
     icon: Layers,
   },
   {
-    name: 'cfgx',
+    name: 'acme-cli',
     description:
-      'Type-safe configuration code generation for Go. Define your config in TOML, generate strongly-typed Go code with zero runtime dependencies.',
-    link: {
-      href: 'https://github.com/gomantics/cfgx',
-      label: 'gomantics/cfgx',
-    },
+      'A sample project card. Point it at one of your repos - the icon, language badge, and link label are all just props.',
+    link: { href: 'https://example.com', label: 'you/acme-cli' },
     language: 'Go',
     icon: FileCode,
   },
   {
-    name: 'sx',
+    name: 'markdown-notes',
     description:
-      'String case conversion for Go. Converts between camelCase, PascalCase, kebab-case, snake_case, and more.',
-    link: { href: 'https://github.com/gomantics/sx', label: 'gomantics/sx' },
-    language: 'Go',
+      'Another placeholder. Cards link out wherever you want - GitHub, a live demo, a package registry, or a write-up.',
+    link: { href: 'https://example.com', label: 'you/markdown-notes' },
+    language: 'Rust',
     icon: CaseSensitive,
   },
   {
-    name: 'semantix',
+    name: 'secret-sauce',
     description:
-      'Semantic code search with MCP integration. Talk to multiple indexed repositories using natural language queries.',
-    link: {
-      href: 'https://github.com/gomantics/semantix',
-      label: 'gomantics/semantix',
-    },
-    language: 'Go',
+      'Use the comingSoon flag for things you are still cooking. The card dims and the link stops working.',
+    link: { href: 'https://example.com', label: 'you/secret-sauce' },
+    language: 'Zig',
     icon: SearchCode,
     comingSoon: true,
   },
 ]
+
 
 function ProjectCard({ project }: { project: Project }) {
   const Icon = project.icon
@@ -151,20 +146,12 @@ function Projects() {
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           Things I've made trying to put my dent in the universe.
         </h1>
+        {/* ✏️ Edit your projects intro below */}
         <p className="mt-6 text-base text-muted-foreground">
-          Most of my high-value work lives inside company repos - that's the
-          reality of building software professionally since my second year of
-          college. These are the open-source things I've shipped under{' '}
-          <a
-            href="https://github.com/gomantics"
-            target="_blank"
-            rel="noreferrer"
-            className="text-foreground underline decoration-muted-foreground/40 underline-offset-2 transition hover:decoration-foreground"
-          >
-            gomantics
-          </a>
-          . They're mostly Go libraries for now - I'm actively working toward
-          building more full-stack, self-hostable apps in the open.
+          A mix of open-source work, side projects, and experiments. Some are
+          actively maintained, some are finished, and some are just ideas that
+          escaped the notebook. Click through to the code or the story behind
+          each one.
         </p>
       </header>
 

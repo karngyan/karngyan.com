@@ -95,77 +95,50 @@ const siteConfig: SiteConfig = {
   },
   work: [
     {
-      company: 'Customer.io',
-      logo: '/logos/customerio.jpeg',
-      url: 'https://customer.io',
+      company: 'Acme Inc',
+      logo: '/logos/acme.png',
+      url: 'https://example.com',
       roles: [
         {
           title: 'Senior Software Engineer',
-          start: { label: 'Sep 2025', dateTime: '2025-09' },
+          start: { label: 'Jan 2024', dateTime: '2024-01' },
           end: { label: 'Present', dateTime: '2026' },
         },
         {
-          title: 'Software Engineer 3',
-          start: { label: 'Oct 2024', dateTime: '2024-10' },
-          end: { label: 'Sep 2025', dateTime: '2025-09' },
-        },
-        {
-          title: 'Software Engineer 2',
+          title: 'Software Engineer',
           start: { label: 'Mar 2022', dateTime: '2022-03' },
-          end: { label: 'Sep 2024', dateTime: '2024-09' },
+          end: { label: 'Jan 2024', dateTime: '2024-01' },
         },
       ],
     },
     {
-      company: 'karnstack',
-      logo: '/logos/karnstack.png',
-      url: 'https://karnstack.com',
-      roles: [
-        {
-          title: 'Founder',
-          start: { label: 'Aug 2025', dateTime: '2025-08' },
-          end: { label: 'Present', dateTime: '2026' },
-        },
-      ],
-    },
-    {
-      company: 'SendX',
-      logo: '/logos/sendx.jpeg',
-      url: 'https://sendx.io',
+      company: 'Globex',
+      logo: '/logos/globex.png',
+      url: 'https://example.com',
       roles: [
         {
           title: 'Software Engineer',
           start: { label: 'Jul 2021', dateTime: '2021-07' },
           end: { label: 'Mar 2022', dateTime: '2022-03' },
         },
-        {
-          title: 'Software Engineer Intern',
-          start: { label: 'Jul 2020', dateTime: '2020-07' },
-          end: { label: 'Jan 2021', dateTime: '2021-01' },
-        },
       ],
     },
     {
-      company: 'Amazon',
-      logo: '/logos/amazon.jpeg',
-      url: 'https://amazon.in',
+      company: 'Initech',
+      logo: '/logos/initech.png',
+      url: 'https://example.com',
       roles: [
         {
-          title: 'SDE Intern',
-          start: { label: 'Jan 2021', dateTime: '2021-01' },
-          end: { label: 'Jul 2021', dateTime: '2021-07' },
-        },
-        {
-          title: 'SDE Intern',
+          title: 'Software Engineer Intern',
           start: { label: 'May 2020', dateTime: '2020-05' },
-          end: { label: 'Jun 2020', dateTime: '2020-06' },
+          end: { label: 'Jul 2021', dateTime: '2021-07' },
         },
       ],
     },
     {
-      company: 'Crio.Do',
-      logo: '/logos/criodo.jpeg',
-      url: 'https://crio.do',
+      company: 'Umbrella Corp',
+      logo: '/logos/umbrella.png',
+      url: 'https://example.com',
       roles: [
         {
           title: 'Software Engineer Intern',

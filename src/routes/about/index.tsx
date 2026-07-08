@@ -89,68 +89,32 @@ function About() {
         <div className="lg:order-first lg:row-span-2">
           {/* ✏️ Edit your bio below - heading and paragraphs are plain JSX */}
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            I'm Karn. I split my time between Bengaluru and Ranchi, and spend
-            most of it writing software.
+            Hi, I'm a software engineer who loves building things for the web.
           </h1>
           <div className="mt-6 space-y-7 text-base text-muted-foreground">
             <p>
-              I've been writing code for as long as I can remember. I got hooked
-              early - competiting in ICPC, building small utilities and games,
-              then slowly graduating to things that actually run in production
-              and serve real users. There's something deeply satisfying about
-              taking an idea from a rough design doc all the way to a shipped
-              feature.
+              I've been writing code for as long as I can remember - small
+              utilities and games at first, then slowly graduating to things
+              that run in production and serve real users. There's something
+              deeply satisfying about taking an idea from a rough sketch all
+              the way to a shipped feature.
             </p>
             <p>
-              I'm a Senior Software Engineer at{' '}
-              <a
-                href="https://customer.io?utm_source=karngyan.com&utm_medium=referral&utm_campaign=about"
-                target="_blank"
-                rel="noreferrer"
-                className="text-foreground underline decoration-muted-foreground/40 underline-offset-2 transition hover:decoration-foreground"
-              >
-                Customer.io
-              </a>
-              , where I work on the In-App messaging and AI teams. My day-to-day
-              involves Go on the backend and React on the frontend. I like
-              working across the full stack and owning features end-to-end, from
-              system design to production.
+              These days I work across the full stack: designing systems,
+              building APIs, and crafting frontends that feel fast. I care
+              about clean interfaces - both the kind users click on and the
+              kind other engineers build against.
             </p>
             <p>
-              Before Customer.io, I did stints at Amazon and SendX, and some
-              earlier internships that shaped how I think about building
-              software. I studied Computer Science, but honestly most of what I
-              know came from obsessively reading source code, breaking things,
-              and fixing them.
+              Outside of work, I write on this site about engineering, tools I
+              find interesting, and ideas I'm thinking through. I'm always up
+              for a side project, and I'm a firm believer that the best way to
+              learn something is to build with it.
             </p>
             <p>
-              Outside of work, I write occasionally on this site about
-              engineering, tools I find interesting, and ideas I'm thinking
-              through. I'm always up for side projects. I build courses for
-              engineers at{' '}
-              <a
-                href="https://karnstack.com"
-                target="_blank"
-                rel="noreferrer"
-                className="text-foreground underline decoration-muted-foreground/40 underline-offset-2 transition hover:decoration-foreground"
-              >
-                karnstack.com
-              </a>
-              , and run{' '}
-              <a
-                href="https://github.com/gomantics"
-                target="_blank"
-                rel="noreferrer"
-                className="text-foreground underline decoration-muted-foreground/40 underline-offset-2 transition hover:decoration-foreground"
-              >
-                gomantics.dev
-              </a>
-              , a GitHub org where I maintain a few Go libraries and apps.
-              Long-term, I'm aiming to retire early. The dream is a farm with
-              lots of animals - that one's mostly my wife's vision, but it's
-              grown on me. After that, I'd like to go back to college, or just
-              code whatever I want with no deadlines. When I'm not at the
-              keyboard, I'm out walking my dog.
+              This site is built from a free, open-source template - if you
+              like it, fork it and make it your own. The whole thing is one
+              config file, a few images, and a folder of MDX articles.
             </p>
           </div>
         </div>
