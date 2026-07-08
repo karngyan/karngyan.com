@@ -1,0 +1,65 @@
+import { ArticleLayout } from '../../../components/article-layout'
+
+export const article = {
+  title: 'Make it your own',
+  description:
+    'The five-minute tour: edit one config file, swap a few images, write your first post, and ship it to Cloudflare.',
+  date: '2026-07-02',
+  author: 'you',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Everything personal about this site lives in three places: one config file, a handful of images, and the content folders. Here's the whole tour.
+
+### 1. Edit `site.config.ts`
+
+The root of the repo has a single typed config file that drives identity, SEO, navigation, socials, and the work history card:
+
+| Field                  | What it controls                                                 |
+| ---------------------- | ---------------------------------------------------------------- |
+| `name`, `shortName`    | Footer copyright and page titles (`Articles - karn`)             |
+| `url`                  | Canonical origin - used by RSS, sitemap, OG tags, `llms.txt`     |
+| `title`, `description` | Default `<title>` and meta description everywhere                |
+| `email`, `social`      | Contact card, social icons on home and about                     |
+| `nav`                  | Header and footer navigation (external links supported)          |
+| `resume`               | Toggle the `/resume` redirect and point it at a PDF in `public/` |
+| `work`                 | Companies and roles shown on the home page                       |
+| `analytics.plausible`  | Opt-in privacy-friendly analytics                                |
+
+TypeScript checks every edit, so a typo fails the build instead of silently shipping.
+
+### 2. Swap the images
+
+```bash
+src/assets/avatar.png      # header avatar
+src/assets/portrait.jpg    # about page portrait
+src/assets/photos/         # the draggable photo strip on the home page
+public/logos/              # company logos referenced from site.config.ts
+```
+
+### 3. Edit the prose
+
+Page copy stays in the route files - look for the ✏️ markers in `src/routes/index.tsx` (hero), `src/routes/about/index.tsx` (bio), `src/routes/uses/index.tsx`, and `src/routes/projects/index.tsx`.
+
+### 4. Write a post
+
+```bash
+mkdir src/content/articles/my-first-post
+$EDITOR src/content/articles/my-first-post/page.mdx
+```
+
+Export an `article` object with `title`, `description`, `date`, and `author`, then write Markdown (or JSX) below it. See [Writing in MDX](/articles/writing-in-mdx) for what the pipeline can do.
+
+### 5. Ship it
+
+```bash
+pnpm run deploy   # build + wrangler deploy to Cloudflare Workers
+```
+
+That's it. The README covers custom domains and the GitHub Actions auto-deploy.

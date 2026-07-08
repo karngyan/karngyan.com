@@ -1,0 +1,72 @@
+import { ArticleLayout } from '../../../components/article-layout'
+
+export const article = {
+  title: 'Writing in MDX',
+  description:
+    'A quick reference of what the article pipeline supports: code blocks with syntax highlighting, tables, callouts, and inline React components.',
+  date: '2026-07-03',
+  author: 'you',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export const Note = ({ children }) => (
+  <div className="rounded-xl border border-border bg-card px-5 py-1 text-sm not-prose my-6">
+    <p className="my-4 text-muted-foreground">{children}</p>
+  </div>
+)
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Articles are MDX, so plain Markdown works everywhere - and when you need more, you can drop in React components. This post doubles as a smoke test for the pipeline.
+
+### Code blocks
+
+Fenced code blocks are highlighted at build time by [Shiki](https://shiki.style) via `rehype-pretty-code`, with separate light and dark themes:
+
+```ts
+interface Greeting {
+  message: string
+}
+
+export function greet(name: string): Greeting {
+  return { message: `Hello, ${name}!` }
+}
+```
+
+Go, too:
+
+```go
+func main() {
+	articles := getAllArticles()
+	for _, a := range articles {
+		fmt.Println(a.Title)
+	}
+}
+```
+
+### GitHub-flavored Markdown
+
+Tables, task lists, and strikethrough all work thanks to `remark-gfm`:
+
+| Feature      | Plugin             | Runs at |
+| ------------ | ------------------ | ------- |
+| Tables       | remark-gfm         | build   |
+| Highlighting | rehype-pretty-code | build   |
+| Components   | @mdx-js/rollup     | build   |
+
+> Blockquotes render through the typography plugin, so they inherit the site theme in both light and dark mode.
+
+### Inline React components
+
+Because this is MDX, you can define or import components right in the article:
+
+<Note>
+  This callout is a React component defined at the top of this very file. Feel
+  free to promote it (or your own) into `src/components/` once you reuse it.
+</Note>
+
+Everything below the frontmatter exports is just content - write, commit, push, and the RSS feed and OG image regenerate on the next build.
