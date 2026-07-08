@@ -84,8 +84,8 @@ function Uses() {
           Software I use, gear I rely on, and things I recommend.
         </h1>
         <p className="mt-6 text-base text-muted-foreground">
-          A living list of the hardware and software I use to build things,
-          stay productive, or convince myself I'm being productive while
+          A living list of the hardware and software I use to build things, stay
+          productive, or convince myself I'm being productive while
           procrastinating. Swap in your own setup.
         </p>
       </header>
@@ -144,8 +144,8 @@ function Uses() {
             credentials again.
           </Tool>
           <Tool title="Plain notes">
-            Notion, Obsidian, or a folder of Markdown files. The system
-            matters less than actually writing things down.
+            Notion, Obsidian, or a folder of Markdown files. The system matters
+            less than actually writing things down.
           </Tool>
         </Section>
       </div>

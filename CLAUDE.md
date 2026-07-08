@@ -31,7 +31,7 @@ pnpm run deploy       # build + wrangler deploy (Cloudflare Workers)
 
 - Page prose (hero, bio, uses, projects) lives in route files marked with `✏️` comments — content edits go there, not in config.
 - Personal data in app code is a bug: identity strings come from `site.config.ts`. Sample/default values may be the template author's.
-- Theme: pre-hydration inline script in `__root.tsx` + ThemeProvider, storage key `site-theme`.
+- Theme: pre-hydration inline script in `__root.tsx` + ThemeProvider, storage key `site-theme`. Global `d` keypress toggles dark/light (handler lives in the provider, skips form fields).
 - Dates in article metadata are `YYYY-MM-DD` strings.
 
 ## Recipes

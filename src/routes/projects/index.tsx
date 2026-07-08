@@ -76,7 +76,6 @@ const projects: Array<Project> = [
   },
 ]
 
-
 function ProjectCard({ project }: { project: Project }) {
   const Icon = project.icon
 

@@ -2,7 +2,6 @@ import { defineConfig } from 'vite'
 import { devtools } from '@tanstack/devtools-vite'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import viteReact from '@vitejs/plugin-react'
-import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
 import { nitro } from 'nitro/vite'
 import mdx from '@mdx-js/rollup'
@@ -10,6 +9,9 @@ import remarkGfm from 'remark-gfm'
 import rehypePrettyCode from 'rehype-pretty-code'
 
 const config = defineConfig({
+  resolve: {
+    tsconfigPaths: true,
+  },
   plugins: [
     devtools(),
     // deploy target: Cloudflare Workers. nitro generates the wrangler config
@@ -24,9 +26,6 @@ const config = defineConfig({
           compatibility_date: '2026-07-02',
         },
       },
-    }),
-    viteTsConfigPaths({
-      projects: ['./tsconfig.json'],
     }),
     tailwindcss(),
     {

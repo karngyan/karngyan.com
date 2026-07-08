@@ -16,7 +16,7 @@
 ## Features
 
 - ⚡ **TanStack Start** — file-based routing, SSR, typed loaders, server routes
-- 🎨 **Tailwind CSS v4 + shadcn/ui** — CSS-first tokens (oklch), dark/light/system theme with no flash
+- 🎨 **Tailwind CSS v4 + shadcn/ui** — CSS-first tokens (oklch), dark/light/system theme with no flash (press `d` to toggle)
 - ✍️ **MDX articles** — folders in `src/content/articles/`, Shiki syntax highlighting, GFM tables, inline React components
 - 📡 **RSS, sitemap, robots.txt, llms.txt** — server routes generated from your content and config
 - 🖼️ **Open Graph images** — generated at build time with satori (default + per-article)

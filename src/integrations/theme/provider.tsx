@@ -53,6 +53,34 @@ export function ThemeProvider({
     root.classList.add(theme)
   }, [theme])
 
+  // press "d" anywhere (outside form fields) to toggle dark/light
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== 'd' && e.key !== 'D') return
+      if (e.metaKey || e.ctrlKey || e.altKey) return
+      const target = e.target
+      if (
+        target instanceof HTMLElement &&
+        (target.isContentEditable ||
+          ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))
+      ) {
+        return
+      }
+      const resolved =
+        theme === 'system'
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light'
+          : theme
+      const next = resolved === 'dark' ? 'light' : 'dark'
+      localStorage.setItem(storageKey, next)
+      setTheme(next)
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [theme, storageKey])
+
   const value = {
     theme,
     setTheme: (newTheme: Theme) => {

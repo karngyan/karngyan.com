@@ -96,14 +96,14 @@ function About() {
               I've been writing code for as long as I can remember - small
               utilities and games at first, then slowly graduating to things
               that run in production and serve real users. There's something
-              deeply satisfying about taking an idea from a rough sketch all
-              the way to a shipped feature.
+              deeply satisfying about taking an idea from a rough sketch all the
+              way to a shipped feature.
             </p>
             <p>
               These days I work across the full stack: designing systems,
-              building APIs, and crafting frontends that feel fast. I care
-              about clean interfaces - both the kind users click on and the
-              kind other engineers build against.
+              building APIs, and crafting frontends that feel fast. I care about
+              clean interfaces - both the kind users click on and the kind other
+              engineers build against.
             </p>
             <p>
               Outside of work, I write on this site about engineering, tools I
@@ -112,9 +112,9 @@ function About() {
               learn something is to build with it.
             </p>
             <p>
-              This site is built from a free, open-source template - if you
-              like it, fork it and make it your own. The whole thing is one
-              config file, a few images, and a folder of MDX articles.
+              This site is built from a free, open-source template - if you like
+              it, fork it and make it your own. The whole thing is one config
+              file, a few images, and a folder of MDX articles.
             </p>
           </div>
         </div>
