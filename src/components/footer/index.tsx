@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router'
+import { Rss } from 'lucide-react'
 
 import siteConfig from '../../../site.config'
 import { ContainerInner, ContainerOuter } from '@/components/container'
@@ -27,10 +28,23 @@ export function Footer() {
                     </NavLink>
                   ))}
               </div>
-              <p className="text-sm text-muted-foreground">
-                &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
-                reserved.
-              </p>
+              <div className="flex items-center gap-x-6 text-sm text-muted-foreground">
+                {/* server routes, not router pages - plain anchors on purpose */}
+                <a
+                  href="/rss.xml"
+                  className="flex items-center gap-1.5 transition hover:text-primary"
+                >
+                  <Rss className="h-3.5 w-3.5" />
+                  RSS
+                </a>
+                <a href="/llms.txt" className="transition hover:text-primary">
+                  llms.txt
+                </a>
+                <p>
+                  &copy; {new Date().getFullYear()} {siteConfig.name}. All
+                  rights reserved.
+                </p>
+              </div>
             </div>
           </ContainerInner>
         </div>
