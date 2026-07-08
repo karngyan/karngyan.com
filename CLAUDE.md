@@ -14,6 +14,8 @@ pnpm check            # prettier --write + eslint --fix
 pnpm typecheck        # tsc --noEmit
 pnpm generate:og      # regenerate OG images only (satori → sharp)
 pnpm run deploy       # build + wrangler deploy (Cloudflare Workers)
+pnpm changeset        # record a change (patch/minor/major + summary)
+pnpm changeset:version # consume changesets -> bump version + CHANGELOG.md
 ```
 
 ## Architecture
