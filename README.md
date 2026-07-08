@@ -11,6 +11,15 @@
 
 ---
 
+[![Dark mode](.github/assets/screenshot-dark.png)](https://template.karngyan.com)
+
+<details>
+<summary>Light mode</summary>
+
+[![Light mode](.github/assets/screenshot-light.png)](https://template.karngyan.com)
+
+</details>
+
 **Demo:** [template.karngyan.com](https://template.karngyan.com) · **Author's site built on the same stack:** [karngyan.com](https://karngyan.com)
 
 ## Features
@@ -112,19 +121,6 @@ The build uses [nitro](https://nitro.build), so other presets (Node server, Netl
 ## Contributing
 
 PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Awesome Forks ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
-
-Raise a PR when your website's up to add you here.
-
-- [Anamika Pandey](https://github.com/anamikapandey745) - [anamika.dev](https://anamika.dev)
-- [Claudio Canales](https://github.com/klaudioz) - [klaudioz.eth](https://klaudioz.eth.link/)
-- [Gyan Prakash Karn](https://github.com/gyankarn) - [karngyan.com](https://karngyan.com)
-- [Nenad Radovanovic](https://github.com/nesaplay) - [nenad.xyz](https://nenad.xyz)
-- [Ankur Dubey](https://github.com/ankurdubey521) - [ankurdubey.com](https://ankurdubey.com) / [ankurdubey.eth.limo](https://ankurdubey.eth.limo)
-- [Madhav Kauntia](https://github.com/madhavkauntia) - [madhavkauntia.com](https://madhavkauntia.com)
-
-> Older forks above were built on the previous Nuxt 2 version of this template — it lives on in git history (`git log`, pre-2026).
 
 ## License
 
