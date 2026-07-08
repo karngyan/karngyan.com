@@ -24,6 +24,7 @@
 ### Task 1: Remove the Nuxt 2 app
 
 **Files:**
+
 - Delete: `assets/ components/ content/ lang/ layouts/ middleware/ pages/ plugins/ static/ store/ nuxt.config.js karngyan.config.js tailwind.config.js gulpfile.js jsconfig.json yarn.lock package.json .env.example .github/workflows/deploy.prod.yml`
 
 - [ ] **Step 1: git rm the Nuxt tree**
@@ -51,10 +52,12 @@ Clean slate for the TanStack Start rebuild. Old code stays in git history."
 ### Task 2: Port canvas verbatim, pin toolchain
 
 **Files:**
+
 - Create: `mise.toml`, plus copies of canvas `package.json tsconfig.json vite.config.ts eslint.config.js prettier.config.js .prettierignore pnpm-workspace.yaml components.json src/ scripts/ public/`
 - Modify: `.gitignore` (union of old + canvas)
 
 **Interfaces:**
+
 - Produces: working canvas app in this repo; `pnpm dev/build/test/check` scripts; `src/lib/articles.ts` exporting `getAllArticles(): ArticleWithSlug[]`, `getArticle(slug)` — later tasks rely on these exact names.
 
 - [ ] **Step 1: Copy canvas files**
@@ -90,40 +93,63 @@ git add -A && git commit -m "feat: port canvas stack (TanStack Start, React 19, 
 ### Task 3: Extract site.config.ts, generalize app code
 
 **Files:**
+
 - Create: `site.config.ts`
 - Modify: `src/routes/__root.tsx`, `src/components/header/index.tsx`, `src/components/footer/index.tsx`, `src/routes/index.tsx`, `src/routes/about/index.tsx`, `src/routes/projects/index.tsx`, `src/routes/uses/index.tsx`, `src/routes/resume.ts`, `src/routes/llms[.]txt.ts`, `src/routes/sitemap[.]xml.ts`, `tsconfig.json`/`vite.config.ts` alias if needed (`~config` → root)
 - Delete: `src/routes/api/v1/subscribe.ts` (and empty api dir)
 
 **Interfaces:**
+
 - Produces: default export `siteConfig: SiteConfig` from `site.config.ts` with the exact shape below. All later tasks import it as `import siteConfig from '~config'` (alias) or relative path.
 
 - [ ] **Step 1: Write `site.config.ts`** (root; values = Karn's as shipped defaults, forkers edit):
 
 ```ts
-export interface NavItem { label: string; to: string; external?: boolean }
+export interface NavItem {
+  label: string
+  to: string
+  external?: boolean
+}
 export interface RoleEntry {
   title: string
   start: { label: string; dateTime: string }
   end: { label: string; dateTime: string }
 }
-export interface CompanyEntry { company: string; logo: string; url: string; roles: RoleEntry[] }
+export interface CompanyEntry {
+  company: string
+  logo: string
+  url: string
+  roles: RoleEntry[]
+}
 export interface Project {
   name: string
   description: string
   link: { href: string; label: string }
   logo?: string
 }
-export interface UsesItem { title: string; description: string }
-export interface UsesSection { title: string; items: UsesItem[] }
+export interface UsesItem {
+  title: string
+  description: string
+}
+export interface UsesSection {
+  title: string
+  items: UsesItem[]
+}
 
 export interface SiteConfig {
   name: string
   shortName: string
-  url: string            // no trailing slash, https://
+  url: string // no trailing slash, https://
   title: string
   description: string
   email: string
-  social: { github?: string; x?: string; linkedin?: string; instagram?: string; calendar?: string }
+  social: {
+    github?: string
+    x?: string
+    linkedin?: string
+    instagram?: string
+    calendar?: string
+  }
   twitterHandle?: string // '@handle', used for twitter:site/creator meta
   nav: NavItem[]
   resume: { enabled: boolean; path: string } // path under public/
@@ -155,9 +181,15 @@ const siteConfig: SiteConfig = {
     { label: 'Uses', to: '/uses' },
   ],
   resume: { enabled: true, path: '/resume.pdf' },
-  work: [ /* CompanyEntry[] moved verbatim from routes/index.tsx Resume() — logos imported there become public/ paths: copy src/assets/logos/* → public/logos/* and reference '/logos/<file>' */ ],
-  projects: [ /* moved from routes/projects/index.tsx hardcoded array */ ],
-  uses: [ /* moved from routes/uses/index.tsx sections */ ],
+  work: [
+    /* CompanyEntry[] moved verbatim from routes/index.tsx Resume() — logos imported there become public/ paths: copy src/assets/logos/* → public/logos/* and reference '/logos/<file>' */
+  ],
+  projects: [
+    /* moved from routes/projects/index.tsx hardcoded array */
+  ],
+  uses: [
+    /* moved from routes/uses/index.tsx sections */
+  ],
 }
 
 export default siteConfig
@@ -186,10 +218,12 @@ Expected: build passes; grep output empty.
 ### Task 4: RSS + robots routes (TDD)
 
 **Files:**
+
 - Create: `src/lib/feeds.ts`, `src/lib/feeds.test.ts`, `src/routes/rss[.]xml.ts`, `src/routes/robots[.]txt.ts`
 - Modify: `src/routes/__root.tsx` (rss alternate link), delete `public/robots.txt`
 
 **Interfaces:**
+
 - Consumes: `getAllArticles()` from `src/lib/articles.ts`, `siteConfig`
 - Produces: `buildRssXml(articles: ArticleWithSlug[]): string`, `buildRobotsTxt(): string`
 
@@ -201,8 +235,20 @@ import { buildRobotsTxt, buildRssXml } from './feeds'
 import siteConfig from '../../site.config'
 
 const articles = [
-  { slug: 'a-b', title: 'Tom & Jerry <3', description: 'x > y', date: '2026-01-02', author: 'K' },
-  { slug: 'older', title: 'Old', description: 'old post', date: '2025-01-01', author: 'K' },
+  {
+    slug: 'a-b',
+    title: 'Tom & Jerry <3',
+    description: 'x > y',
+    date: '2026-01-02',
+    author: 'K',
+  },
+  {
+    slug: 'older',
+    title: 'Old',
+    description: 'old post',
+    date: '2025-01-01',
+    author: 'K',
+  },
 ]
 
 describe('buildRssXml', () => {
@@ -307,13 +353,14 @@ export const Route = createFileRoute('/rss.xml')({
 ### Task 5: Replace sample content
 
 **Files:**
+
 - Delete: `src/content/articles/*` (canvas personal posts), personal `public/resume_karn_may_2026.pdf`, `src/assets/photos/*` stay (generic), `src/assets/portrait.jpg`/`avatar.png` stay as defaults
 - Create: three sample articles, `public/resume.pdf` placeholder
 
 - [ ] **Step 1: Write 3 sample articles** under `src/content/articles/<slug>/page.mdx`, each `export const article = { title, description, author, date }`:
   1. `hello-world` — welcome post; explains this site is built from the template, links repo. Short prose.
   2. `make-it-your-own` — walk through editing `site.config.ts`, adding an article directory, swapping avatar/photos, resume pdf. Includes a ```bash fenced block and a GFM table of config fields.
-  3. `writing-in-mdx` — demos MDX: headings, ```ts + ```go code blocks (shiki themes), blockquote, list, inline `code`, an image (colocated `cover.png` — reuse one canvas photo), a React component inline (`<Note>` defined in-file as a styled div).
+  3. `writing-in-mdx` — demos MDX: headings, `ts + `go code blocks (shiki themes), blockquote, list, inline `code`, an image (colocated `cover.png` — reuse one canvas photo), a React component inline (`<Note>` defined in-file as a styled div).
 - [ ] **Step 2: Resume placeholder** — `public/resume.pdf`: generate one-page placeholder PDF via `scripts/` one-liner? No — simplest: keep `resume.enabled: false` as shipped default in site.config.ts and delete pdf; README documents enabling. Update config default accordingly.
 - [ ] **Step 3: Regenerate OG images** — `pnpm generate:og`; confirm `public/og/articles/*.png` for 3 new slugs, stale ones deleted.
 - [ ] **Step 4: Build + test + commit** — `feat: fresh sample articles demonstrating MDX pipeline`
@@ -321,6 +368,7 @@ export const Route = createFileRoute('/rss.xml')({
 ### Task 6: Cloudflare Workers deploy (default target)
 
 **Files:**
+
 - Create: `wrangler.jsonc`, `.github/workflows/deploy.yml`
 - Modify: `vite.config.ts` (nitro cloudflare preset), `package.json` (deploy script, wrangler devDependency), `.gitignore` (`.wrangler/`)
 
@@ -337,7 +385,7 @@ export const Route = createFileRoute('/rss.xml')({
   "compatibility_date": "2026-07-01",
   "compatibility_flags": ["nodejs_compat"],
   "assets": { "directory": ".output/public", "binding": "ASSETS" },
-  "observability": { "enabled": true }
+  "observability": { "enabled": true },
 }
 ```
 
@@ -349,6 +397,7 @@ export const Route = createFileRoute('/rss.xml')({
 ### Task 7: README, CLAUDE.md, contributor docs
 
 **Files:**
+
 - Rewrite: `README.md`; Create: `CLAUDE.md`; Modify: `CONTRIBUTING.md`, `.env.example` (remove — no env needed; or keep empty placeholder note)
 
 - [ ] **Step 1: README.md** — sections: hero (name + one-liner + screenshot placeholder), Features (stack bullets), Quick Start (`Use this template` → `mise install` → `pnpm install` → `pnpm dev`), Make It Yours (edit `site.config.ts`, write `src/content/articles/<slug>/page.mdx`, swap `src/assets`, styles.css accent), Deploy to Cloudflare (wrangler login → `pnpm deploy`; CI secrets `CLOUDFLARE_API_TOKEN`+`CLOUDFLARE_ACCOUNT_ID`), Other hosts (nitro presets note), Contributing, **Awesome Forks (preserve existing list verbatim)**, License, Contact.

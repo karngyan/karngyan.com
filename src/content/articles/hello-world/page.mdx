@@ -8,7 +8,10 @@ export const article = {
   author: 'karn',
 }
 
-export const metadata = { title: article.title, description: article.description }
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
 
 export default (props) => <ArticleLayout article={article} {...props} />
 

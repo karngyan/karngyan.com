@@ -25,7 +25,7 @@ export interface CompanyEntry {
   /** path under public/, e.g. '/logos/acme.jpeg' */
   logo: string
   url: string
-  roles: RoleEntry[]
+  roles: Array<RoleEntry>
 }
 
 export interface SiteConfig {
@@ -50,14 +50,14 @@ export interface SiteConfig {
   }
   /** '@handle' for twitter:site / twitter:creator meta */
   twitterHandle?: string
-  nav: NavItem[]
+  nav: Array<NavItem>
   resume: {
     enabled: boolean
     /** path under public/, e.g. '/resume.pdf' */
     path: string
   }
   /** work history shown in the card on the home page */
-  work: CompanyEntry[]
+  work: Array<CompanyEntry>
   analytics?: {
     plausible?: {
       domain: string

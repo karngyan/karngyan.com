@@ -28,7 +28,7 @@ function slugFromPath(path: string): string {
   return parts[parts.length - 2]
 }
 
-export function getAllArticles(): ArticleWithSlug[] {
+export function getAllArticles(): Array<ArticleWithSlug> {
   const articles = Object.entries(articleModules).map(([path, mod]) => ({
     slug: slugFromPath(path),
     ...mod.article,
@@ -37,8 +37,12 @@ export function getAllArticles(): ArticleWithSlug[] {
   return articles.sort((a, z) => +new Date(z.date) - +new Date(a.date))
 }
 
-export function getArticle(slug: string): { slug: string; Component: ComponentType; meta: ArticleMeta } | null {
-  const entry = Object.entries(articleModules).find(([path]) => slugFromPath(path) === slug)
+export function getArticle(
+  slug: string,
+): { slug: string; Component: ComponentType; meta: ArticleMeta } | null {
+  const entry = Object.entries(articleModules).find(
+    ([path]) => slugFromPath(path) === slug,
+  )
   if (!entry) return null
   const [path, mod] = entry
   return {

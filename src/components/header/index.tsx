@@ -3,11 +3,11 @@ import { createPortal } from 'react-dom'
 import { Link, useLocation } from '@tanstack/react-router'
 import clsx from 'clsx'
 
+import siteConfig from '../../../site.config'
 import { Container } from '@/components/container'
 import { ModeToggle } from '@/components/mode-toggle'
 import { clamp } from '@/lib/utils'
 import avatarImage from '@/assets/avatar.png'
-import siteConfig from '../../../site.config'
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -151,7 +151,15 @@ function MobileNavigation({
   )
 }
 
-function NavItem({ to, children, external }: { to: string; children: React.ReactNode; external?: boolean }) {
+function NavItem({
+  to,
+  children,
+  external,
+}: {
+  to: string
+  children: React.ReactNode
+  external?: boolean
+}) {
   const pathname = useLocation({ select: (loc) => loc.pathname })
   const isActive = !external && pathname === to
 

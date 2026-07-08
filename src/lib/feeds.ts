@@ -10,7 +10,7 @@ function escapeXml(s: string): string {
     .replaceAll("'", '&apos;')
 }
 
-export function buildRssXml(articles: ArticleWithSlug[]): string {
+export function buildRssXml(articles: Array<ArticleWithSlug>): string {
   const items = articles
     .map((a) => {
       const url = `${siteConfig.url}/articles/${a.slug}`

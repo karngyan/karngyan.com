@@ -60,7 +60,10 @@ export const article = {
   author: 'you',
 }
 
-export const metadata = { title: article.title, description: article.description }
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
 
 export default (props) => <ArticleLayout article={article} {...props} />
 
@@ -98,13 +101,13 @@ The build uses [nitro](https://nitro.build), so other presets (Node server, Netl
 
 ## Commands
 
-| Command | What it does |
-| --- | --- |
-| `pnpm dev` | Dev server on :3000 |
-| `pnpm build` | OG images + production build → `.output/` |
-| `pnpm test` | vitest |
-| `pnpm check` | prettier + eslint (auto-fix) |
-| `pnpm run deploy` | build + `wrangler deploy` |
+| Command           | What it does                              |
+| ----------------- | ----------------------------------------- |
+| `pnpm dev`        | Dev server on :3000                       |
+| `pnpm build`      | OG images + production build → `.output/` |
+| `pnpm test`       | vitest                                    |
+| `pnpm check`      | prettier + eslint (auto-fix)              |
+| `pnpm run deploy` | build + `wrangler deploy`                 |
 
 ## Contributing
 
@@ -114,12 +117,12 @@ PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Raise a PR when your website's up to add you here.
 
-* [Anamika Pandey](https://github.com/anamikapandey745) - [anamika.dev](https://anamika.dev)
-* [Claudio Canales](https://github.com/klaudioz) - [klaudioz.eth](https://klaudioz.eth.link/)
-* [Gyan Prakash Karn](https://github.com/gyankarn) - [karngyan.com](https://karngyan.com)
-* [Nenad Radovanovic](https://github.com/nesaplay) - [nenad.xyz](https://nenad.xyz)
-* [Ankur Dubey](https://github.com/ankurdubey521) - [ankurdubey.com](https://ankurdubey.com) / [ankurdubey.eth.limo](https://ankurdubey.eth.limo)
-* [Madhav Kauntia](https://github.com/madhavkauntia) - [madhavkauntia.com](https://madhavkauntia.com)
+- [Anamika Pandey](https://github.com/anamikapandey745) - [anamika.dev](https://anamika.dev)
+- [Claudio Canales](https://github.com/klaudioz) - [klaudioz.eth](https://klaudioz.eth.link/)
+- [Gyan Prakash Karn](https://github.com/gyankarn) - [karngyan.com](https://karngyan.com)
+- [Nenad Radovanovic](https://github.com/nesaplay) - [nenad.xyz](https://nenad.xyz)
+- [Ankur Dubey](https://github.com/ankurdubey521) - [ankurdubey.com](https://ankurdubey.com) / [ankurdubey.eth.limo](https://ankurdubey.eth.limo)
+- [Madhav Kauntia](https://github.com/madhavkauntia) - [madhavkauntia.com](https://madhavkauntia.com)
 
 > Older forks above were built on the previous Nuxt 2 version of this template — it lives on in git history (`git log`, pre-2026).
 

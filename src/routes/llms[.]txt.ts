@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { getAllArticles } from '@/lib/articles'
 import siteConfig from '../../site.config'
+import { getAllArticles } from '@/lib/articles'
 
 const SITE_URL = siteConfig.url
 
@@ -43,7 +43,7 @@ ${articleLinks}
 export const Route = createFileRoute('/llms.txt')({
   server: {
     handlers: {
-      GET: async () => {
+      GET: () => {
         const content = buildLlmsTxt()
         return new Response(content, {
           headers: {

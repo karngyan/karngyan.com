@@ -1,15 +1,15 @@
 import { createFileRoute } from '@tanstack/react-router'
+import siteConfig from '../../../site.config'
 import { cn } from '@/lib/utils'
 import { Container } from '@/components/container'
 import {
+  CalendarIcon,
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
   XIcon,
-  CalendarIcon,
 } from '@/components/social-icons'
 import portraitImage from '@/assets/portrait.jpg'
-import siteConfig from '../../../site.config'
 
 export const Route = createFileRoute('/about/')({
   component: About,

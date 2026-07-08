@@ -1,16 +1,19 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { motion, useAnimationFrame, useMotionValue } from 'motion/react'
-import { useRef, useCallback } from 'react'
+import { useCallback, useRef } from 'react'
 
+import siteConfig from '../../site.config'
+import type { CompanyEntry, RoleEntry } from '../../site.config'
+import type { ArticleWithSlug } from '@/lib/articles'
 import { ContentCard } from '@/components/content-card'
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/container'
 import {
+  CalendarIcon,
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
   XIcon,
-  CalendarIcon,
 } from '@/components/social-icons'
 import image1 from '@/assets/photos/image-1.jpg'
 import image2 from '@/assets/photos/image-2.jpg'
@@ -21,10 +24,9 @@ import image6 from '@/assets/photos/image-6.jpg'
 import image7 from '@/assets/photos/image-7.jpg'
 import image8 from '@/assets/photos/image-8.jpg'
 import image9 from '@/assets/photos/image-9.jpg'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
+import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/format-date'
 import { cn } from '@/lib/utils'
-import siteConfig, { type CompanyEntry, type RoleEntry } from '../../site.config'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -212,17 +214,17 @@ function Resume() {
         ))}
       </ol>
       {siteConfig.resume.enabled && (
-      <a
-        href={siteConfig.resume.path}
-        download
-        className={cn(
-          buttonVariants({ variant: 'secondary' }),
-          'group mt-6 flex w-full items-center justify-center gap-2',
-        )}
-      >
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-muted-foreground transition group-hover:stroke-foreground" />
-      </a>
+        <a
+          href={siteConfig.resume.path}
+          download
+          className={cn(
+            buttonVariants({ variant: 'secondary' }),
+            'group mt-6 flex w-full items-center justify-center gap-2',
+          )}
+        >
+          Download CV
+          <ArrowDownIcon className="h-4 w-4 stroke-muted-foreground transition group-hover:stroke-foreground" />
+        </a>
       )}
     </div>
   )

@@ -2,9 +2,9 @@
  * Build-time OG image generation using Satori.
  * Generates og.png (default) and og/articles/{slug}.png for each article.
  */
-import { readFileSync, mkdirSync, writeFileSync, readdirSync } from 'fs'
-import { dirname, join, resolve } from 'path'
-import { fileURLToPath } from 'url'
+import { mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { dirname, join, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import satori from 'satori'
 import sharp from 'sharp'
 import React from 'react'
@@ -21,8 +21,11 @@ interface ArticleWithSlug extends ArticleMeta {
   slug: string
 }
 
-function getAllArticles(): ArticleWithSlug[] {
-  const articlesDir = join(resolve(dirname(fileURLToPath(import.meta.url)), '..'), 'src/content/articles')
+function getAllArticles(): Array<ArticleWithSlug> {
+  const articlesDir = join(
+    resolve(dirname(fileURLToPath(import.meta.url)), '..'),
+    'src/content/articles',
+  )
   const dirs = readdirSync(articlesDir, { withFileTypes: true })
     .filter((d) => d.isDirectory())
     .map((d) => d.name)
@@ -32,7 +35,7 @@ function getAllArticles(): ArticleWithSlug[] {
     return block.match(re)?.[2] ?? ''
   }
 
-  const articles: ArticleWithSlug[] = []
+  const articles: Array<ArticleWithSlug> = []
   for (const slug of dirs) {
     const mdxPath = join(articlesDir, slug, 'page.mdx')
     try {
@@ -74,7 +77,8 @@ async function loadFont(): Promise<ArrayBuffer> {
   )
   const css = await cssRes.text()
   const urlMatch = css.match(/url\((https:\/\/[^)]+)\)/)
-  if (!urlMatch) throw new Error('Could not extract font URL from Google Fonts CSS')
+  if (!urlMatch)
+    throw new Error('Could not extract font URL from Google Fonts CSS')
   const fontRes = await fetch(urlMatch[1])
   return fontRes.arrayBuffer()
 }
@@ -139,7 +143,9 @@ function OgTemplate({
               maxWidth: 900,
             }}
           >
-            {description.length > 120 ? `${description.slice(0, 120)}...` : description}
+            {description.length > 120
+              ? `${description.slice(0, 120)}...`
+              : description}
           </div>
         )}
       </div>
@@ -184,9 +190,7 @@ async function generatePng(
     ],
   })
 
-  const png = await sharp(Buffer.from(svg), { density: 72 })
-    .png()
-    .toBuffer()
+  const png = await sharp(Buffer.from(svg), { density: 72 }).png().toBuffer()
 
   return png
 }
@@ -224,7 +228,9 @@ async function main() {
     console.log(`Generated ${outPath}`)
   }
 
-  console.log(`Done. Generated 1 default + ${articles.length} article OG images.`)
+  console.log(
+    `Done. Generated 1 default + ${articles.length} article OG images.`,
+  )
 }
 
 main().catch((err) => {

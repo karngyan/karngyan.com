@@ -8,7 +8,10 @@ export const article = {
   author: 'karn',
 }
 
-export const metadata = { title: article.title, description: article.description }
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
 
 export const Note = ({ children }) => (
   <div className="rounded-xl border border-border bg-card px-5 py-1 text-sm not-prose my-6">
@@ -49,11 +52,11 @@ func main() {
 
 Tables, task lists, and strikethrough all work thanks to `remark-gfm`:
 
-| Feature | Plugin | Runs at |
-| --- | --- | --- |
-| Tables | remark-gfm | build |
-| Highlighting | rehype-pretty-code | build |
-| Components | @mdx-js/rollup | build |
+| Feature      | Plugin             | Runs at |
+| ------------ | ------------------ | ------- |
+| Tables       | remark-gfm         | build   |
+| Highlighting | rehype-pretty-code | build   |
+| Components   | @mdx-js/rollup     | build   |
 
 > Blockquotes render through the typography plugin, so they inherit the site theme in both light and dark mode.
 

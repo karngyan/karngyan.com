@@ -1,17 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { CaseSensitive, FileCode, Layers, Link, SearchCode } from 'lucide-react'
+import siteConfig from '../../../site.config'
+import type { LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Container } from '@/components/container'
 import { ContentCard } from '@/components/content-card'
 import { Badge } from '@/components/ui/badge'
-import siteConfig from '../../../site.config'
-import {
-  CaseSensitive,
-  FileCode,
-  Layers,
-  Link,
-  SearchCode,
-  type LucideIcon,
-} from 'lucide-react'
 
 export const Route = createFileRoute('/projects/')({
   component: Projects,
@@ -43,7 +37,7 @@ type Project = {
 }
 
 // ✏️ Edit your projects below
-const projects: Project[] = [
+const projects: Array<Project> = [
   {
     name: 'chunkx',
     description:

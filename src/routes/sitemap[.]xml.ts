@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { getAllArticles } from '@/lib/articles'
 import siteConfig from '../../site.config'
+import { getAllArticles } from '@/lib/articles'
 
 const SITE_URL = siteConfig.url
 
@@ -14,7 +14,9 @@ function buildSitemapXml(): string {
     { path: '/articles', priority: '0.8' },
     { path: '/projects', priority: '0.8' },
     { path: '/uses', priority: '0.8' },
-    ...(siteConfig.resume.enabled ? [{ path: '/resume', priority: '0.7' }] : []),
+    ...(siteConfig.resume.enabled
+      ? [{ path: '/resume', priority: '0.7' }]
+      : []),
   ]
 
   const urlEntries = [
@@ -47,7 +49,7 @@ ${urlEntries.join('\n')}
 export const Route = createFileRoute('/sitemap.xml')({
   server: {
     handlers: {
-      GET: async () => {
+      GET: () => {
         const xml = buildSitemapXml()
         return new Response(xml, {
           headers: {

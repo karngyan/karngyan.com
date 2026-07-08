@@ -1,6 +1,6 @@
 import { createFileRoute, notFound } from '@tanstack/react-router'
-import { getAllArticles, getArticle } from '@/lib/articles'
 import siteConfig from '../../../site.config'
+import { getAllArticles, getArticle } from '@/lib/articles'
 
 const siteUrl = siteConfig.url
 

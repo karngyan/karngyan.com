@@ -8,7 +8,10 @@ export const article = {
   author: 'karn',
 }
 
-export const metadata = { title: article.title, description: article.description }
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
 
 export default (props) => <ArticleLayout article={article} {...props} />
 
@@ -18,16 +21,16 @@ Everything personal about this site lives in three places: one config file, a ha
 
 The root of the repo has a single typed config file that drives identity, SEO, navigation, socials, and the work history card:
 
-| Field | What it controls |
-| --- | --- |
-| `name`, `shortName` | Footer copyright and page titles (`Articles - karn`) |
-| `url` | Canonical origin - used by RSS, sitemap, OG tags, `llms.txt` |
-| `title`, `description` | Default `<title>` and meta description everywhere |
-| `email`, `social` | Contact card, social icons on home and about |
-| `nav` | Header and footer navigation (external links supported) |
-| `resume` | Toggle the `/resume` redirect and point it at a PDF in `public/` |
-| `work` | Companies and roles shown on the home page |
-| `analytics.plausible` | Opt-in privacy-friendly analytics |
+| Field                  | What it controls                                                 |
+| ---------------------- | ---------------------------------------------------------------- |
+| `name`, `shortName`    | Footer copyright and page titles (`Articles - karn`)             |
+| `url`                  | Canonical origin - used by RSS, sitemap, OG tags, `llms.txt`     |
+| `title`, `description` | Default `<title>` and meta description everywhere                |
+| `email`, `social`      | Contact card, social icons on home and about                     |
+| `nav`                  | Header and footer navigation (external links supported)          |
+| `resume`               | Toggle the `/resume` redirect and point it at a PDF in `public/` |
+| `work`                 | Companies and roles shown on the home page                       |
+| `analytics.plausible`  | Opt-in privacy-friendly analytics                                |
 
 TypeScript checks every edit, so a typo fails the build instead of silently shipping.
 

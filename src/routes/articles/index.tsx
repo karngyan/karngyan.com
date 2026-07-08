@@ -1,9 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
+import siteConfig from '../../../site.config'
+import type { ArticleWithSlug } from '@/lib/articles'
 import { Container } from '@/components/container'
 import { ContentCard } from '@/components/content-card'
-import { getAllArticles, type ArticleWithSlug } from '@/lib/articles'
+import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/format-date'
-import siteConfig from '../../../site.config'
 
 export const Route = createFileRoute('/articles/')({
   component: ArticlesIndex,

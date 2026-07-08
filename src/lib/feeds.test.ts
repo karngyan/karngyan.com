@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { buildRobotsTxt, buildRssXml } from './feeds'
 import siteConfig from '../../site.config'
+import { buildRobotsTxt, buildRssXml } from './feeds'
 
 const articles = [
   {

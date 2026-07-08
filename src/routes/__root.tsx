@@ -1,14 +1,14 @@
 import {
   HeadContent,
-  Scripts,
-  ScriptOnce,
-  createRootRoute,
   Link,
+  ScriptOnce,
+  Scripts,
+  createRootRoute,
 } from '@tanstack/react-router'
-import { ThemeProvider } from '@/integrations/theme/provider'
 
 import appCss from '../styles.css?url'
 import siteConfig from '../../site.config'
+import { ThemeProvider } from '@/integrations/theme/provider'
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/container'
 import { Layout } from '@/components/layout'

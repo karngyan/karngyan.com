@@ -1,7 +1,7 @@
 import { Link } from '@tanstack/react-router'
 
-import { ContainerInner, ContainerOuter } from '@/components/container'
 import siteConfig from '../../../site.config'
+import { ContainerInner, ContainerOuter } from '@/components/container'
 
 function NavLink({ to, children }: { to: string; children: React.ReactNode }) {
   return (
@@ -28,7 +28,8 @@ export function Footer() {
                   ))}
               </div>
               <p className="text-sm text-muted-foreground">
-                &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+                &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
+                reserved.
               </p>
             </div>
           </ContainerInner>
