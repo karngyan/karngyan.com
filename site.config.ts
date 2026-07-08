@@ -69,9 +69,9 @@ export interface SiteConfig {
 
 const siteConfig: SiteConfig = {
   name: 'Gyan Prakash Karn',
-  shortName: 'karn',
+  shortName: 'template',
   url: 'https://template.karngyan.com',
-  title: 'karn - your friendly neighbourhood developer 🕸️',
+  title: 'karngyan.com template - personal site starter for developers',
   description:
     'Personal site built from the karngyan.com template: TanStack Start, React, Tailwind v4, shadcn/ui, MDX articles, RSS - deployed on Cloudflare Workers.',
   email: 'mail@karngyan.com',
