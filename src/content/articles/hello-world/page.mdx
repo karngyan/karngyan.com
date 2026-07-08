@@ -1,0 +1,27 @@
+import { ArticleLayout } from '../../../components/article-layout'
+
+export const article = {
+  title: 'Hello, world',
+  description:
+    'This site runs on the karngyan.com template - TanStack Start, React, Tailwind v4, MDX, and an RSS feed, deployed on Cloudflare Workers.',
+  date: '2026-07-01',
+  author: 'karn',
+}
+
+export const metadata = { title: article.title, description: article.description }
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Welcome! If you can read this, the site is up and the MDX pipeline works.
+
+This site is built from the [karngyan.com template](https://github.com/karngyan/karngyan.com) - a personal site starter for developers who would rather write posts than build infrastructure. Under the hood it's:
+
+- **TanStack Start** with file-based routing and SSR
+- **React 19** + **Tailwind CSS v4** + **shadcn/ui**
+- **MDX** articles with Shiki syntax highlighting
+- **RSS**, sitemap, `robots.txt`, `llms.txt`, and Open Graph images out of the box
+- **Cloudflare Workers** as the default deploy target
+
+Every article is a folder in `src/content/articles/` with a `page.mdx` inside. Delete the sample posts, write your own, and the article index, RSS feed, sitemap, and OG images all update automatically at build time.
+
+Head over to [Make it your own](/articles/make-it-your-own) for the five-minute customization tour.
