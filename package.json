@@ -1,5 +1,5 @@
 {
-  "name": "canvas",
+  "name": "karngyan.com",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,9 +8,12 @@
     "build": "pnpm run generate:og && vite build",
     "preview": "vite preview",
     "test": "vitest run",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint",
     "format": "prettier",
-    "check": "prettier --write . && eslint --fix"
+    "check": "prettier --write . && eslint --fix",
+    "deploy": "pnpm run build && wrangler deploy",
+    "cf:dev": "pnpm run build && wrangler dev"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
@@ -29,7 +32,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^1.7.0",
     "motion": "^12.38.0",
-    "nitro": "latest",
+    "nitro": "3.0.260311-beta",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "rehype-pretty-code": "^0.14.3",
@@ -58,7 +61,8 @@
     "typescript": "^6.0.2",
     "vite": "^8.0.3",
     "vitest": "^4.1.2",
-    "web-vitals": "^5.2.0"
+    "web-vitals": "^5.2.0",
+    "wrangler": "^4.107.1"
   },
   "packageManager": "pnpm@10.30.2+sha512.36cdc707e7b7940a988c9c1ecf88d084f8514b5c3f085f53a2e244c2921d3b2545bc20dd4ebe1fc245feec463bb298aecea7a63ed1f7680b877dc6379d8d0cb4"
 }

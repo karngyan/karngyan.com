@@ -12,7 +12,19 @@ import rehypePrettyCode from 'rehype-pretty-code'
 const config = defineConfig({
   plugins: [
     devtools(),
-    nitro(),
+    // deploy target: Cloudflare Workers. nitro generates the wrangler config
+    // at build time (.output/server/wrangler.json). Other hosts: swap the
+    // preset - https://nitro.build/deploy
+    nitro({
+      preset: 'cloudflare-module',
+      cloudflare: {
+        wrangler: {
+          // ✏️ your Cloudflare Worker name
+          name: 'karngyan-com',
+          compatibility_date: '2026-07-02',
+        },
+      },
+    }),
     viteTsConfigPaths({
       projects: ['./tsconfig.json'],
     }),

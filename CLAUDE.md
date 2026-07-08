@@ -11,11 +11,10 @@ pnpm dev              # dev server on http://localhost:3000
 pnpm build            # generates OG images, then vite build → .output/
 pnpm test             # vitest
 pnpm check            # prettier --write + eslint --fix
+pnpm typecheck        # tsc --noEmit
 pnpm generate:og      # regenerate OG images only (satori → sharp)
-pnpm deploy           # build + wrangler deploy (Cloudflare Workers)
+pnpm run deploy       # build + wrangler deploy (Cloudflare Workers)
 ```
-
-Typecheck: `pnpm exec tsc --noEmit` (no dedicated script).
 
 ## Architecture
 

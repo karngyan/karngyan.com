@@ -80,7 +80,7 @@ pnpm wrangler login
 Then, every deploy:
 
 ```bash
-pnpm deploy      # = pnpm build && wrangler deploy
+pnpm run deploy  # = pnpm build && wrangler deploy
 ```
 
 Your site is live on `<name>.<account>.workers.dev`. Add a custom domain in the Cloudflare dashboard (Workers → your worker → Settings → Domains & Routes), then set `url` in `site.config.ts` to match.
@@ -104,7 +104,7 @@ The build uses [nitro](https://nitro.build), so other presets (Node server, Netl
 | `pnpm build` | OG images + production build → `.output/` |
 | `pnpm test` | vitest |
 | `pnpm check` | prettier + eslint (auto-fix) |
-| `pnpm deploy` | build + `wrangler deploy` |
+| `pnpm run deploy` | build + `wrangler deploy` |
 
 ## Contributing
 
