@@ -417,3 +417,14 @@ export const Route = createFileRoute('/rss.xml')({
 - Spec coverage: goals all mapped (stack→T2, config→T3, RSS/robots→T4, samples→T5, CF→T6, mise→T2, README/CLAUDE→T7, verify→T8). Dropped features handled in T1/T3 deletions.
 - Data-move arrays in T3 marked as verbatim lifts from canvas files, not placeholders (source content exists and executor reads it in-step).
 - T6 flagged for reconciliation against live docs before execution.
+
+## Appendix: Cloudflare deploy path reconciliation (post-research)
+
+Web research (TanStack hosting docs + Cloudflare framework guide, post-Oct-2025) surfaced two valid paths:
+
+1. **Official recommendation:** `@cloudflare/vite-plugin` + `main: "@tanstack/react-start/server-entry"` in wrangler.jsonc, no nitro plugin, output in `dist/`.
+2. **Nitro path (shipped):** `nitro/vite` plugin with the cloudflare module preset; nitro generates `.output/server/wrangler.json` + `.wrangler/deploy/config.json` at build.
+
+Decision: **keep the nitro path** — it matches karngyan/canvas (the reference implementation), was verified end-to-end here (workerd dev serving all routes, `wrangler deploy --dry-run` clean), and nitro is pinned exactly (3.0.260311-beta). The inline `nitro({ preset, cloudflare })` config is typed in the installed plugin (`NitroPluginConfig extends NitroConfig`) and works, docs notwithstanding. Both preset spellings normalize; installed beta accepts `cloudflare-module`.
+
+Caveats to watch: TanStack docs mark nitro/vite "under active development"; nitrojs/nitro#3356 (tRPC + SSR nested-route refresh bug — not applicable, no tRPC here). If churn bites, switch to path 1: swap `nitro()` for `cloudflare({ viteEnvironment: { name: 'ssr' } })`, hand-write wrangler.jsonc with the server-entry main, drop the compat-date pin workaround.
