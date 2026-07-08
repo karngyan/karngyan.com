@@ -1,7 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { getAllArticles } from '@/lib/articles'
+import siteConfig from '../../site.config'
 
-const SITE_URL = 'https://karngyan.com'
+const SITE_URL = siteConfig.url
 
 function buildSitemapXml(): string {
   const articles = getAllArticles()
@@ -13,7 +14,7 @@ function buildSitemapXml(): string {
     { path: '/articles', priority: '0.8' },
     { path: '/projects', priority: '0.8' },
     { path: '/uses', priority: '0.8' },
-    { path: '/resume', priority: '0.7' },
+    ...(siteConfig.resume.enabled ? [{ path: '/resume', priority: '0.7' }] : []),
   ]
 
   const urlEntries = [

@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router'
 
 import { ContainerInner, ContainerOuter } from '@/components/container'
+import siteConfig from '../../../site.config'
 
 function NavLink({ to, children }: { to: string; children: React.ReactNode }) {
   return (
@@ -18,14 +19,16 @@ export function Footer() {
           <ContainerInner>
             <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-foreground">
-                <NavLink to="/about">About</NavLink>
-                <NavLink to="/articles">Articles</NavLink>
-                <NavLink to="/projects">Projects</NavLink>
-                <NavLink to="/uses">Uses</NavLink>
+                {siteConfig.nav
+                  .filter((item) => !item.external)
+                  .map((item) => (
+                    <NavLink key={item.to} to={item.to}>
+                      {item.label}
+                    </NavLink>
+                  ))}
               </div>
               <p className="text-sm text-muted-foreground">
-                &copy; {new Date().getFullYear()} Karn Stack. All rights
-                reserved.
+                &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
               </p>
             </div>
           </ContainerInner>

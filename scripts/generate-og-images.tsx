@@ -8,6 +8,7 @@ import { fileURLToPath } from 'url'
 import satori from 'satori'
 import sharp from 'sharp'
 import React from 'react'
+import siteConfig from '../site.config'
 
 interface ArticleMeta {
   title: string
@@ -42,7 +43,7 @@ function getAllArticles(): ArticleWithSlug[] {
       const title = extractString(block, 'title') || slug
       const description = extractString(block, 'description')
       const date = extractString(block, 'date')
-      const author = extractString(block, 'author') || 'karn'
+      const author = extractString(block, 'author') || siteConfig.shortName
       articles.push({ slug, title, description, date, author })
     } catch {
       // skip if file missing or unreadable
@@ -116,7 +117,7 @@ function OgTemplate({
             letterSpacing: 2,
           }}
         >
-          karngyan.com
+          {new URL(siteConfig.url).host}
         </div>
         <div
           style={{
@@ -159,7 +160,7 @@ function OgTemplate({
           }}
         />
         <span style={{ fontSize: 14, color: '#71717a' }}>
-          your friendly neighbourhood developer
+          {siteConfig.shortName}
         </span>
       </div>
     </div>
@@ -199,8 +200,8 @@ async function main() {
   // Default OG image
   const defaultPng = await generatePng(
     <OgTemplate
-      title="karn"
-      description="Senior Software Engineer at Customer.io. I build product experiences end-to-end with Go and React. Based in Bengaluru, India."
+      title={siteConfig.shortName}
+      description={siteConfig.description}
     />,
     fontData,
   )

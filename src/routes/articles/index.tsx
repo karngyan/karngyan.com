@@ -3,6 +3,7 @@ import { Container } from '@/components/container'
 import { ContentCard } from '@/components/content-card'
 import { getAllArticles, type ArticleWithSlug } from '@/lib/articles'
 import { formatDate } from '@/lib/format-date'
+import siteConfig from '../../../site.config'
 
 export const Route = createFileRoute('/articles/')({
   component: ArticlesIndex,
@@ -11,13 +12,13 @@ export const Route = createFileRoute('/articles/')({
   },
   head: () => ({
     meta: [
-      { title: 'Articles - karn' },
+      { title: `Articles - ${siteConfig.shortName}` },
       {
         name: 'description',
         content:
           'Long-form thoughts on software engineering, career, data structures, and more.',
       },
-      { property: 'og:title', content: 'Articles - karn' },
+      { property: 'og:title', content: `Articles - ${siteConfig.shortName}` },
       {
         property: 'og:description',
         content:

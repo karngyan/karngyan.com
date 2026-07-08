@@ -1,12 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { motion, useAnimationFrame, useMotionValue } from 'motion/react'
-import { useRef, useCallback, useState } from 'react'
+import { useRef, useCallback } from 'react'
 
 import { ContentCard } from '@/components/content-card'
-import { Button } from '@/components/ui/button'
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/container'
-import { Input } from '@/components/ui/input'
 import {
   GitHubIcon,
   InstagramIcon,
@@ -14,11 +12,6 @@ import {
   XIcon,
   CalendarIcon,
 } from '@/components/social-icons'
-import logoCustomerio from '@/assets/logos/customerio.jpeg'
-import logoKarnstack from '@/assets/logos/karnstack.png'
-import logoSendx from '@/assets/logos/sendx.jpeg'
-import logoAmazon from '@/assets/logos/amazon.jpeg'
-import logoCriodo from '@/assets/logos/criodo.jpeg'
 import image1 from '@/assets/photos/image-1.jpg'
 import image2 from '@/assets/photos/image-2.jpg'
 import image3 from '@/assets/photos/image-3.jpg'
@@ -31,6 +24,7 @@ import image9 from '@/assets/photos/image-9.jpg'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/format-date'
 import { cn } from '@/lib/utils'
+import siteConfig, { type CompanyEntry, type RoleEntry } from '../../site.config'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -130,158 +124,34 @@ function SocialLink({
   )
 }
 
-function Newsletter() {
-  const [email, setEmail] = useState('')
-  const [status, setStatus] = useState<
-    'idle' | 'loading' | 'success' | 'error'
-  >('idle')
-  const [message, setMessage] = useState('')
-  const [description, setDescription] = useState('')
-  const formLoadTime = useRef(Date.now())
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email || status === 'loading') return
-
-    setStatus('loading')
-    setMessage('')
-
-    const form = e.target as HTMLFormElement
-    const honeypot = (form.elements.namedItem('website') as HTMLInputElement)
-      .value
-    const timeSpent = Date.now() - formLoadTime.current
-
-    try {
-      const response = await fetch('/api/v1/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          _hp: honeypot,
-          _ts: timeSpent,
-          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-          locale: navigator.language,
-          referrer: document.referrer || undefined,
-        }),
-      })
-
-      const result: {
-        success: boolean
-        message?: string
-        description?: string
-      } = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.message || 'Something went wrong')
-      }
-
-      await new Promise((resolve) => setTimeout(resolve, 500))
-
-      setStatus('success')
-      setMessage(result.message ?? '')
-      setDescription(result.description ?? '')
-      setEmail('')
-    } catch (error) {
-      setStatus('error')
-      setMessage(
-        error instanceof Error
-          ? error.message
-          : 'Something went wrong. Please try again.',
-      )
-    }
-  }
-
+function GetInTouch() {
   return (
     <div className="rounded-2xl border border-border bg-card p-6">
       <h2 className="flex text-sm font-semibold text-foreground">
         <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
+        <span className="ml-3">Get in touch</span>
       </h2>
       <p className="mt-2 text-sm text-muted-foreground">
-        Get notified when I publish something new, and unsubscribe at any time.
+        Questions, ideas, or just want to say hi? My inbox is always open.
       </p>
-      {status === 'success' ? (
-        <div className="mt-6 flex items-center gap-3">
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10">
-            <svg
-              className="h-5 w-5 text-primary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-          </div>
-          <div>
-            <p className="text-sm font-medium text-foreground">{message}</p>
-            <p className="text-xs text-muted-foreground">{description}</p>
-          </div>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit} className="mt-6">
-          <input
-            type="text"
-            name="website"
-            tabIndex={-1}
-            autoComplete="off"
-            aria-hidden="true"
-            className="absolute -left-[9999px] h-0 w-0 opacity-0"
-          />
-          <div className="flex items-center gap-4">
-            <Input
-              type="email"
-              placeholder="Email address"
-              aria-label="Email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              disabled={status === 'loading'}
-              className="flex-1"
-            />
-            <Button
-              type="submit"
-              size="default"
-              disabled={status === 'loading'}
-            >
-              {status === 'loading' ? 'Joining...' : 'Join'}
-            </Button>
-          </div>
-          {status === 'error' && message && (
-            <p className="mt-3 text-sm text-destructive">{message}</p>
-          )}
-        </form>
-      )}
+      <a
+        href={`mailto:${siteConfig.email}`}
+        className={cn(
+          buttonVariants({ variant: 'secondary' }),
+          'group mt-6 flex w-full items-center justify-center gap-2',
+        )}
+      >
+        {siteConfig.email}
+      </a>
     </div>
   )
 }
 
-interface RoleEntry {
-  title: string
-  start: string | { label: string; dateTime: string }
-  end: string | { label: string; dateTime: string }
-}
-
-interface CompanyEntry {
-  company: string
-  logo: string
-  url: string
-  roles: RoleEntry[]
-}
-
 function RoleItem({ role }: { role: RoleEntry }) {
-  const startLabel =
-    typeof role.start === 'string' ? role.start : role.start.label
-  const startDate =
-    typeof role.start === 'string' ? role.start : role.start.dateTime
-  const endLabel = typeof role.end === 'string' ? role.end : role.end.label
-  const endDate = typeof role.end === 'string' ? role.end : role.end.dateTime
+  const startLabel = role.start.label
+  const startDate = role.start.dateTime
+  const endLabel = role.end.label
+  const endDate = role.end.dateTime
 
   return (
     <div className="flex items-baseline justify-between gap-x-2">
@@ -328,94 +198,7 @@ function CompanyRole({ entry }: { entry: CompanyEntry }) {
 }
 
 function Resume() {
-  const resume: CompanyEntry[] = [
-    {
-      company: 'Customer.io',
-      logo: logoCustomerio,
-      url: 'https://customer.io',
-      roles: [
-        {
-          title: 'Senior Software Engineer',
-          start: { label: 'Sep 2025', dateTime: '2025-09' },
-          end: {
-            label: 'Present',
-            dateTime: new Date().getFullYear().toString(),
-          },
-        },
-        {
-          title: 'Software Engineer 3',
-          start: { label: 'Oct 2024', dateTime: '2024-10' },
-          end: { label: 'Sep 2025', dateTime: '2025-09' },
-        },
-        {
-          title: 'Software Engineer 2',
-          start: { label: 'Mar 2022', dateTime: '2022-03' },
-          end: { label: 'Sep 2024', dateTime: '2024-09' },
-        },
-      ],
-    },
-    {
-      company: 'karnstack',
-      logo: logoKarnstack,
-      url: 'https://karnstack.com',
-      roles: [
-        {
-          title: 'Founder',
-          start: { label: 'Aug 2025', dateTime: '2025-08' },
-          end: {
-            label: 'Present',
-            dateTime: new Date().getFullYear().toString(),
-          },
-        },
-      ],
-    },
-    {
-      company: 'SendX',
-      logo: logoSendx,
-      url: 'https://sendx.io',
-      roles: [
-        {
-          title: 'Software Engineer',
-          start: { label: 'Jul 2021', dateTime: '2021-07' },
-          end: { label: 'Mar 2022', dateTime: '2022-03' },
-        },
-        {
-          title: 'Software Engineer Intern',
-          start: { label: 'Jul 2020', dateTime: '2020-07' },
-          end: { label: 'Jan 2021', dateTime: '2021-01' },
-        },
-      ],
-    },
-    {
-      company: 'Amazon',
-      logo: logoAmazon,
-      url: 'https://amazon.in',
-      roles: [
-        {
-          title: 'SDE Intern',
-          start: { label: 'Jan 2021', dateTime: '2021-01' },
-          end: { label: 'Jul 2021', dateTime: '2021-07' },
-        },
-        {
-          title: 'SDE Intern',
-          start: { label: 'May 2020', dateTime: '2020-05' },
-          end: { label: 'Jun 2020', dateTime: '2020-06' },
-        },
-      ],
-    },
-    {
-      company: 'Crio.Do',
-      logo: logoCriodo,
-      url: 'https://crio.do',
-      roles: [
-        {
-          title: 'Software Engineer Intern',
-          start: { label: 'Oct 2019', dateTime: '2019-10' },
-          end: { label: 'Apr 2020', dateTime: '2020-04' },
-        },
-      ],
-    },
-  ]
+  const resume = siteConfig.work
 
   return (
     <div className="rounded-2xl border border-border bg-card p-6">
@@ -428,9 +211,10 @@ function Resume() {
           <CompanyRole key={i} entry={entry} />
         ))}
       </ol>
+      {siteConfig.resume.enabled && (
       <a
-        href="/resume_karn_may_2026.pdf"
-        download="resume_karn_may_2026.pdf"
+        href={siteConfig.resume.path}
+        download
         className={cn(
           buttonVariants({ variant: 'secondary' }),
           'group mt-6 flex w-full items-center justify-center gap-2',
@@ -439,6 +223,7 @@ function Resume() {
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-muted-foreground transition group-hover:stroke-foreground" />
       </a>
+      )}
     </div>
   )
 }
@@ -585,21 +370,10 @@ export const Route = createFileRoute('/')({
   component: Home,
   head: () => ({
     meta: [
-      { title: 'karn - your friendly neighbourhood developer 🕸️' },
-      {
-        name: 'description',
-        content:
-          'Senior Software Engineer at Customer.io. I build product experiences end-to-end with Go and React, and build courses for engineers at karnstack.com. Based in Bengaluru, India.',
-      },
-      {
-        property: 'og:title',
-        content: 'karn - your friendly neighbourhood developer 🕸️',
-      },
-      {
-        property: 'og:description',
-        content:
-          'Senior Software Engineer at Customer.io. I build product experiences end-to-end with Go and React, and build courses for engineers at karnstack.com. Based in Bengaluru, India.',
-      },
+      { title: siteConfig.title },
+      { name: 'description', content: siteConfig.description },
+      { property: 'og:title', content: siteConfig.title },
+      { property: 'og:description', content: siteConfig.description },
     ],
   }),
 })
@@ -611,6 +385,7 @@ function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
+          {/* ✏️ Edit your hero heading and intro below */}
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             I ship code, review PRs, and walk the dog. Not always in that order.
           </h1>
@@ -638,31 +413,41 @@ function Home() {
             . Based in Bengaluru, India.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://x.com/gyankarn"
-              aria-label="Follow on X"
-              icon={XIcon}
-            />
-            <SocialLink
-              href="https://www.instagram.com/karnstack"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com/karngyan"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://www.linkedin.com/in/karngyan"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
-            <SocialLink
-              href="https://cal.com/karngyan/chat-w-karn?duration=15"
-              aria-label="Book a call"
-              icon={CalendarIcon}
-            />
+            {siteConfig.social.x && (
+              <SocialLink
+                href={siteConfig.social.x}
+                aria-label="Follow on X"
+                icon={XIcon}
+              />
+            )}
+            {siteConfig.social.instagram && (
+              <SocialLink
+                href={siteConfig.social.instagram}
+                aria-label="Follow on Instagram"
+                icon={InstagramIcon}
+              />
+            )}
+            {siteConfig.social.github && (
+              <SocialLink
+                href={siteConfig.social.github}
+                aria-label="Follow on GitHub"
+                icon={GitHubIcon}
+              />
+            )}
+            {siteConfig.social.linkedin && (
+              <SocialLink
+                href={siteConfig.social.linkedin}
+                aria-label="Follow on LinkedIn"
+                icon={LinkedInIcon}
+              />
+            )}
+            {siteConfig.social.calendar && (
+              <SocialLink
+                href={siteConfig.social.calendar}
+                aria-label="Book a call"
+                icon={CalendarIcon}
+              />
+            )}
           </div>
         </div>
       </Container>
@@ -675,7 +460,7 @@ function Home() {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            <GetInTouch />
             <Resume />
           </div>
         </div>

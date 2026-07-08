@@ -18,7 +18,6 @@ import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
 import { Route as AboutIndexRouteImport } from './routes/about/index'
 import { Route as ArticlesSlugRouteImport } from './routes/articles/$slug'
-import { Route as ApiV1SubscribeRouteImport } from './routes/api/v1/subscribe'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -65,11 +64,6 @@ const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
   path: '/articles/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiV1SubscribeRoute = ApiV1SubscribeRouteImport.update({
-  id: '/api/v1/subscribe',
-  path: '/api/v1/subscribe',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -81,7 +75,6 @@ export interface FileRoutesByFullPath {
   '/articles/': typeof ArticlesIndexRoute
   '/projects/': typeof ProjectsIndexRoute
   '/uses/': typeof UsesIndexRoute
-  '/api/v1/subscribe': typeof ApiV1SubscribeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -93,7 +86,6 @@ export interface FileRoutesByTo {
   '/articles': typeof ArticlesIndexRoute
   '/projects': typeof ProjectsIndexRoute
   '/uses': typeof UsesIndexRoute
-  '/api/v1/subscribe': typeof ApiV1SubscribeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -106,7 +98,6 @@ export interface FileRoutesById {
   '/articles/': typeof ArticlesIndexRoute
   '/projects/': typeof ProjectsIndexRoute
   '/uses/': typeof UsesIndexRoute
-  '/api/v1/subscribe': typeof ApiV1SubscribeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -120,7 +111,6 @@ export interface FileRouteTypes {
     | '/articles/'
     | '/projects/'
     | '/uses/'
-    | '/api/v1/subscribe'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -132,7 +122,6 @@ export interface FileRouteTypes {
     | '/articles'
     | '/projects'
     | '/uses'
-    | '/api/v1/subscribe'
   id:
     | '__root__'
     | '/'
@@ -144,7 +133,6 @@ export interface FileRouteTypes {
     | '/articles/'
     | '/projects/'
     | '/uses/'
-    | '/api/v1/subscribe'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -157,7 +145,6 @@ export interface RootRouteChildren {
   ArticlesIndexRoute: typeof ArticlesIndexRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
   UsesIndexRoute: typeof UsesIndexRoute
-  ApiV1SubscribeRoute: typeof ApiV1SubscribeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -225,13 +212,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/v1/subscribe': {
-      id: '/api/v1/subscribe'
-      path: '/api/v1/subscribe'
-      fullPath: '/api/v1/subscribe'
-      preLoaderRoute: typeof ApiV1SubscribeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -245,7 +225,6 @@ const rootRouteChildren: RootRouteChildren = {
   ArticlesIndexRoute: ArticlesIndexRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
   UsesIndexRoute: UsesIndexRoute,
-  ApiV1SubscribeRoute: ApiV1SubscribeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

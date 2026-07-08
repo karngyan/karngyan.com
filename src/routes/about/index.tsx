@@ -9,23 +9,16 @@ import {
   CalendarIcon,
 } from '@/components/social-icons'
 import portraitImage from '@/assets/portrait.jpg'
+import siteConfig from '../../../site.config'
 
 export const Route = createFileRoute('/about/')({
   component: About,
   head: () => ({
     meta: [
-      { title: 'About - karn' },
-      {
-        name: 'description',
-        content:
-          'Senior Software Engineer at Customer.io. Based in Bengaluru. I build things end-to-end with Go and React, build courses for engineers at karnstack.com, and write occasionally about engineering.',
-      },
-      { property: 'og:title', content: 'About - karn' },
-      {
-        property: 'og:description',
-        content:
-          'Senior Software Engineer at Customer.io. Based in Bengaluru. I build things end-to-end with Go and React, build courses for engineers at karnstack.com, and write occasionally about engineering.',
-      },
+      { title: `About - ${siteConfig.shortName}` },
+      { name: 'description', content: siteConfig.description },
+      { property: 'og:title', content: `About - ${siteConfig.shortName}` },
+      { property: 'og:description', content: siteConfig.description },
     ],
   }),
 })
@@ -87,13 +80,14 @@ function About() {
           <div className="mx-auto max-w-xs px-2.5 lg:mx-0 lg:max-w-none">
             <img
               src={portraitImage}
-              alt="Karn"
+              alt={siteConfig.name}
               className="aspect-square rotate-3 rounded-2xl bg-muted object-cover"
             />
           </div>
         </div>
 
         <div className="lg:order-first lg:row-span-2">
+          {/* ✏️ Edit your bio below - heading and paragraphs are plain JSX */}
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             I'm Karn. I split my time between Bengaluru and Ranchi, and spend
             most of it writing software.
@@ -163,43 +157,53 @@ function About() {
 
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="https://x.com/gyankarn" icon={XIcon}>
-              Follow on X
-            </SocialLink>
+            {siteConfig.social.x && (
+              <SocialLink href={siteConfig.social.x} icon={XIcon}>
+                Follow on X
+              </SocialLink>
+            )}
+            {siteConfig.social.instagram && (
+              <SocialLink
+                href={siteConfig.social.instagram}
+                icon={InstagramIcon}
+                className="mt-4"
+              >
+                Follow on Instagram
+              </SocialLink>
+            )}
+            {siteConfig.social.github && (
+              <SocialLink
+                href={siteConfig.social.github}
+                icon={GitHubIcon}
+                className="mt-4"
+              >
+                Follow on GitHub
+              </SocialLink>
+            )}
+            {siteConfig.social.linkedin && (
+              <SocialLink
+                href={siteConfig.social.linkedin}
+                icon={LinkedInIcon}
+                className="mt-4"
+              >
+                Follow on LinkedIn
+              </SocialLink>
+            )}
+            {siteConfig.social.calendar && (
+              <SocialLink
+                href={siteConfig.social.calendar}
+                icon={CalendarIcon}
+                className="mt-4"
+              >
+                Book a call
+              </SocialLink>
+            )}
             <SocialLink
-              href="https://www.instagram.com/karnstack"
-              icon={InstagramIcon}
-              className="mt-4"
-            >
-              Follow on Instagram
-            </SocialLink>
-            <SocialLink
-              href="https://github.com/karngyan"
-              icon={GitHubIcon}
-              className="mt-4"
-            >
-              Follow on GitHub
-            </SocialLink>
-            <SocialLink
-              href="https://www.linkedin.com/in/karngyan"
-              icon={LinkedInIcon}
-              className="mt-4"
-            >
-              Follow on LinkedIn
-            </SocialLink>
-            <SocialLink
-              href="https://cal.com/karngyan/chat-w-karn?duration=15"
-              icon={CalendarIcon}
-              className="mt-4"
-            >
-              Book a call
-            </SocialLink>
-            <SocialLink
-              href="mailto:mail@karngyan.com"
+              href={`mailto:${siteConfig.email}`}
               icon={MailIcon}
               className="mt-8 border-t border-border pt-8"
             >
-              mail@karngyan.com
+              {siteConfig.email}
             </SocialLink>
           </ul>
         </div>

@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils'
 import { Container } from '@/components/container'
 import { ContentCard } from '@/components/content-card'
 import { Badge } from '@/components/ui/badge'
+import siteConfig from '../../../site.config'
 import {
   CaseSensitive,
   FileCode,
@@ -16,13 +17,13 @@ export const Route = createFileRoute('/projects/')({
   component: Projects,
   head: () => ({
     meta: [
-      { title: 'Projects - karn' },
+      { title: `Projects - ${siteConfig.shortName}` },
       {
         name: 'description',
         content:
           'Open source projects and side experiments I have built and maintain.',
       },
-      { property: 'og:title', content: 'Projects - karn' },
+      { property: 'og:title', content: `Projects - ${siteConfig.shortName}` },
       {
         property: 'og:description',
         content:
@@ -41,6 +42,7 @@ type Project = {
   comingSoon?: boolean
 }
 
+// ✏️ Edit your projects below
 const projects: Project[] = [
   {
     name: 'chunkx',

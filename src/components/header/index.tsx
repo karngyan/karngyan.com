@@ -7,6 +7,7 @@ import { Container } from '@/components/container'
 import { ModeToggle } from '@/components/mode-toggle'
 import { clamp } from '@/lib/utils'
 import avatarImage from '@/assets/avatar.png'
+import siteConfig from '../../../site.config'
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -122,27 +123,16 @@ function MobileNavigation({
               </div>
               <nav className="mt-6">
                 <ul className="-my-2 divide-y divide-border text-base text-foreground">
-                  <MobileNavItem to="/about" onNavigate={() => setOpen(false)}>
-                    About
-                  </MobileNavItem>
-                  <MobileNavItem
-                    to="/articles"
-                    onNavigate={() => setOpen(false)}
-                  >
-                    Articles
-                  </MobileNavItem>
-                  <MobileNavItem
-                    to="/projects"
-                    onNavigate={() => setOpen(false)}
-                  >
-                    Projects
-                  </MobileNavItem>
-                  <MobileNavItem to="/uses" onNavigate={() => setOpen(false)}>
-                    Uses
-                  </MobileNavItem>
-                  <MobileNavItem to="https://karnstack.com" onNavigate={() => setOpen(false)} external>
-                    Courses
-                  </MobileNavItem>
+                  {siteConfig.nav.map((item) => (
+                    <MobileNavItem
+                      key={item.to}
+                      to={item.to}
+                      external={item.external}
+                      onNavigate={() => setOpen(false)}
+                    >
+                      {item.label}
+                    </MobileNavItem>
+                  ))}
                 </ul>
               </nav>
             </div>
@@ -198,11 +188,11 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
     <nav {...props}>
       <ul className="flex rounded-xl bg-background/90 px-3 text-sm font-medium text-foreground shadow-md ring-1 ring-border backdrop-blur-sm">
-        <NavItem to="/about">About</NavItem>
-        <NavItem to="/articles">Articles</NavItem>
-        <NavItem to="/projects">Projects</NavItem>
-        <NavItem to="/uses">Uses</NavItem>
-        <NavItem to="https://karnstack.com" external>Courses</NavItem>
+        {siteConfig.nav.map((item) => (
+          <NavItem key={item.to} to={item.to} external={item.external}>
+            {item.label}
+          </NavItem>
+        ))}
       </ul>
     </nav>
   )

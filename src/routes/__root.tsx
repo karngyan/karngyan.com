@@ -8,13 +8,14 @@ import {
 import { ThemeProvider } from '@/integrations/theme/provider'
 
 import appCss from '../styles.css?url'
+import siteConfig from '../../site.config'
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/container'
 import { Layout } from '@/components/layout'
 
 const themeScript = `(function() {
   try {
-    const storageKey = 'karngyan-theme';
+    const storageKey = 'site-theme';
     const theme = localStorage.getItem(storageKey) || 'system';
     const resolved = theme === 'system'
       ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
@@ -23,10 +24,9 @@ const themeScript = `(function() {
   } catch (e) {}
 })();`
 
-const siteUrl = 'https://karngyan.com'
-const defaultTitle = 'karn - your friendly neighbourhood developer 🕸️'
-const defaultDescription =
-  'Senior Software Engineer at Customer.io. I build product experiences end-to-end with Go and React, and build courses for engineers at karnstack.com. Writing about software, engineering, and things I find interesting.'
+const siteUrl = siteConfig.url
+const defaultTitle = siteConfig.title
+const defaultDescription = siteConfig.description
 const defaultOgImage = `${siteUrl}/og.png`
 
 export const Route = createRootRoute({
@@ -48,15 +48,19 @@ export const Route = createRootRoute({
       },
       // Open Graph
       { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'karngyan.com' },
+      { property: 'og:site_name', content: new URL(siteConfig.url).host },
       { property: 'og:title', content: defaultTitle },
       { property: 'og:description', content: defaultDescription },
       { property: 'og:image', content: defaultOgImage },
       { property: 'og:url', content: siteUrl },
       // Twitter / X
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@gyankarn' },
-      { name: 'twitter:creator', content: '@gyankarn' },
+      ...(siteConfig.twitterHandle
+        ? [
+            { name: 'twitter:site', content: siteConfig.twitterHandle },
+            { name: 'twitter:creator', content: siteConfig.twitterHandle },
+          ]
+        : []),
       { name: 'twitter:title', content: defaultTitle },
       { name: 'twitter:description', content: defaultDescription },
       { name: 'twitter:image', content: defaultOgImage },
@@ -86,7 +90,7 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider defaultTheme="system" storageKey="karngyan-theme">
+    <ThemeProvider defaultTheme="system" storageKey="site-theme">
       <html lang="en" className="h-full antialiased" suppressHydrationWarning>
         <head>
           <HeadContent />
@@ -96,6 +100,16 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           <div className="flex w-full">
             <Layout>{children}</Layout>
           </div>
+          {siteConfig.analytics?.plausible && (
+            <script
+              defer
+              data-domain={siteConfig.analytics.plausible.domain}
+              src={
+                siteConfig.analytics.plausible.scriptSrc ??
+                'https://plausible.io/js/script.js'
+              }
+            />
+          )}
           <Scripts />
         </body>
       </html>

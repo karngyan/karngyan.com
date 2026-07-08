@@ -1,17 +1,18 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Container } from '@/components/container'
+import siteConfig from '../../../site.config'
 
 export const Route = createFileRoute('/uses/')({
   component: Uses,
   head: () => ({
     meta: [
-      { title: 'Uses - karn' },
+      { title: `Uses - ${siteConfig.shortName}` },
       {
         name: 'description',
         content:
           'The gear, software, and tools I use daily for software development.',
       },
-      { property: 'og:title', content: 'Uses - karn' },
+      { property: 'og:title', content: `Uses - ${siteConfig.shortName}` },
       {
         property: 'og:description',
         content:
@@ -77,6 +78,7 @@ function Tool({
 function Uses() {
   return (
     <Container className="mt-16 sm:mt-32">
+      {/* ✏️ Edit your uses list below - Section and Tool are plain components */}
       <header className="max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           Software I use, gear I rely on, and things I recommend.

@@ -1,7 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { getAllArticles } from '@/lib/articles'
+import siteConfig from '../../site.config'
 
-const SITE_URL = 'https://karngyan.com'
+const SITE_URL = siteConfig.url
 
 function buildLlmsTxt(): string {
   const articles = getAllArticles()
@@ -14,15 +15,18 @@ function buildLlmsTxt(): string {
     )
     .join('\n')
 
-  return `# karn - karngyan.com
+  const resumeLine = siteConfig.resume.enabled
+    ? `\n- [Resume](${SITE_URL}/resume): PDF resume download`
+    : ''
 
-> Senior Software Engineer at Customer.io. I build product experiences end-to-end with Go and React, and build courses for engineers at karnstack.com. Writing about software, engineering, and things I find interesting.
+  return `# ${siteConfig.shortName} - ${new URL(siteConfig.url).host}
+
+> ${siteConfig.description}
 
 ## About
 
 - [Home](${SITE_URL}/): Portfolio and blog homepage
-- [About](${SITE_URL}/about): Background and contact info
-- [Resume](${SITE_URL}/resume): PDF resume download
+- [About](${SITE_URL}/about): Background and contact info${resumeLine}
 - [Projects](${SITE_URL}/projects): Side projects and open source
 - [Uses](${SITE_URL}/uses): Tools and setup
 

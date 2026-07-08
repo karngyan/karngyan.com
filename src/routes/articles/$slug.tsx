@@ -1,7 +1,8 @@
 import { createFileRoute, notFound } from '@tanstack/react-router'
 import { getAllArticles, getArticle } from '@/lib/articles'
+import siteConfig from '../../../site.config'
 
-const siteUrl = 'https://karngyan.com'
+const siteUrl = siteConfig.url
 
 export const Route = createFileRoute('/articles/$slug')({
   component: ArticlePage,
@@ -14,7 +15,7 @@ export const Route = createFileRoute('/articles/$slug')({
   head: ({ loaderData }) => {
     if (!loaderData) return {}
     const { meta, slug } = loaderData
-    const title = `${meta.title} - karn`
+    const title = `${meta.title} - ${siteConfig.shortName}`
     const description = meta.description
     const url = `${siteUrl}/articles/${slug}`
     const ogImage = `${siteUrl}/og/articles/${slug}.png`
