@@ -71,6 +71,12 @@ export const Route = createRootRoute({
         href: appCss,
       },
       {
+        rel: 'alternate',
+        type: 'application/rss+xml',
+        title: siteConfig.title,
+        href: '/rss.xml',
+      },
+      {
         rel: 'manifest',
         href: '/manifest.json',
       },
